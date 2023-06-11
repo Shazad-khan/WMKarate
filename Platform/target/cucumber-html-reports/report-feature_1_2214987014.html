@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Feature: Washmetrix/Features/individualWash.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>WashMetrix</td>
+      <td>11 Jun 2023, 13:04</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">Washmetrix/Features/individualWash.feature</td>
+          <td      class="passed"    >7</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">7</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="2109739408">2.109</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+
+<div class="tags indention">
+</div>
+
+
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">Washmetrix/Features/individualWash.feature</span>
+
+
+</div>
+
+        <div class="description indention">Individual Car wash</div>
+
+        <div class="elements inner-level">
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.001</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url 'https://svc-qa.washmetrix.com/'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>13:04:22.652 karate.env system property was: null 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">2.108</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-4">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Testing api for individual car wash</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def payload =</span>
+
+  <span class="lead-duration duration">0.045</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>{
+    &quot;org_id&quot;: &quot;7d26c7a5-7dbc-43db-96be-f6f142084614&quot;,
+    &quot;user_id&quot;: &quot;81e2fbfa-33ef-4673-b169-783853da5772&quot;,
+    &quot;locations&quot;: [
+  1,
+  2,
+  3
+    ],
+    &quot;time_range&quot;: {
+  &quot;start_time&quot;: &quot;&quot;,
+  &quot;end_time&quot;: &quot;&quot;,
+  &quot;anchor_time&quot;: &quot;&quot;
+    },
+    &quot;frequency&quot;: &quot;&quot;,
+    &quot;detail_data&quot;: true,
+    &quot;comparison_mode&quot;: &quot;current&quot;
+    }</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">header Authorization = 'Bearer ' + 'eyJraWQiOiJQenJ6UFwvV29yWGk2d0VHTDN5cGtZbVNEU09QY0tFVDdhUTZOeFNIbU5qOD0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4ZWM5ZTQ2MS05NTYyLTRhOWQtOWIzYi01OWEwODFhN2FiODEiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9LcXdYdEl6bHIiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI3OTV0ZmswbGZqbGhxMDJ0NDAydTZqMGtuMSIsIm9yaWdpbl9qdGkiOiI5ZjMyZTBkOS02NWQ4LTQ3ZjItOTBmMS0wZmQyMjk3NmEwNjIiLCJldmVudF9pZCI6IjFmMWI1MDU3LWNkZGEtNDg1ZS05MTYzLTA5MTMxZTZmZjhjNiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoicGhvbmUgb3BlbmlkIGVtYWlsIiwiYXV0aF90aW1lIjoxNjg2NDY4MTEyLCJleHAiOjE2ODY1NTQ1MTIsImlhdCI6MTY4NjQ2ODExMiwianRpIjoiYTRmYTE2ZDItMjk1NC00OWM1LTkyYzMtMzc3NzNlOTkwMmE1IiwidXNlcm5hbWUiOiJiYWxhcmFqdS52ZW11bGEifQ.XPjyMgdNMhuXSrjT9k1Xtq-4RqKjg1SZN-yzfdOo82WOds5tQqCcHzQGr4xCKBhASJqaqmXwSlLzCRKbfLsPxLprZaXI6Wfm575a8XnaLayFE2saOXPp39vISiBMeUl0jLoUQ7FpMcuqOEagwzffpH7uDW9tFxqqMKNVt0TQfhNoAzwsXi51xkFKnaleNe5ozzlipBcA7_nugjn8DPIEBVAX5Z_FJszBFJAK0TK8MKPpTNFNBXKeZ5zo6TFu24Ai82jzz59RH41Vbl8dOAESF17qb0Aarcvy9BU_SKlpW6YtowBqQbXkCRMUvxSe2DVez-Mhf8NgZCc2L49GSoe-CA'</span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'sales-and-labor/individual-wash'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request payload</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">2.057</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>13:04:22.894 request:
+1 &gt; POST https://svc-qa.washmetrix.com/sales-and-labor/individual-wash
+1 &gt; Authorization: Bearer eyJraWQiOiJQenJ6UFwvV29yWGk2d0VHTDN5cGtZbVNEU09QY0tFVDdhUTZOeFNIbU5qOD0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4ZWM5ZTQ2MS05NTYyLTRhOWQtOWIzYi01OWEwODFhN2FiODEiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9LcXdYdEl6bHIiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI3OTV0ZmswbGZqbGhxMDJ0NDAydTZqMGtuMSIsIm9yaWdpbl9qdGkiOiI5ZjMyZTBkOS02NWQ4LTQ3ZjItOTBmMS0wZmQyMjk3NmEwNjIiLCJldmVudF9pZCI6IjFmMWI1MDU3LWNkZGEtNDg1ZS05MTYzLTA5MTMxZTZmZjhjNiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoicGhvbmUgb3BlbmlkIGVtYWlsIiwiYXV0aF90aW1lIjoxNjg2NDY4MTEyLCJleHAiOjE2ODY1NTQ1MTIsImlhdCI6MTY4NjQ2ODExMiwianRpIjoiYTRmYTE2ZDItMjk1NC00OWM1LTkyYzMtMzc3NzNlOTkwMmE1IiwidXNlcm5hbWUiOiJiYWxhcmFqdS52ZW11bGEifQ.XPjyMgdNMhuXSrjT9k1Xtq-4RqKjg1SZN-yzfdOo82WOds5tQqCcHzQGr4xCKBhASJqaqmXwSlLzCRKbfLsPxLprZaXI6Wfm575a8XnaLayFE2saOXPp39vISiBMeUl0jLoUQ7FpMcuqOEagwzffpH7uDW9tFxqqMKNVt0TQfhNoAzwsXi51xkFKnaleNe5ozzlipBcA7_nugjn8DPIEBVAX5Z_FJszBFJAK0TK8MKPpTNFNBXKeZ5zo6TFu24Ai82jzz59RH41Vbl8dOAESF17qb0Aarcvy9BU_SKlpW6YtowBqQbXkCRMUvxSe2DVez-Mhf8NgZCc2L49GSoe-CA
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 242
+1 &gt; Host: svc-qa.washmetrix.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;org_id&quot;:&quot;7d26c7a5-7dbc-43db-96be-f6f142084614&quot;,&quot;user_id&quot;:&quot;81e2fbfa-33ef-4673-b169-783853da5772&quot;,&quot;locations&quot;:[1,2,3],&quot;time_range&quot;:{&quot;start_time&quot;:&quot;&quot;,&quot;end_time&quot;:&quot;&quot;,&quot;anchor_time&quot;:&quot;&quot;},&quot;frequency&quot;:&quot;&quot;,&quot;detail_data&quot;:true,&quot;comparison_mode&quot;:&quot;current&quot;}
+
+13:04:24.764 response time in milliseconds: 1868
+1 &lt; 200
+1 &lt; Date: Sun, 11 Jun 2023 07:34:24 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 1256
+1 &lt; Connection: keep-alive
+1 &lt; Server: nginx
+1 &lt; x-response-time: 0.38675570487976074
+{&quot;info&quot;:{&quot;identifier&quot;:&quot;INDIVIDUAL_WASHES&quot;,&quot;default_frequency&quot;:&quot;monthly&quot;,&quot;available_frequencies&quot;:[&quot;monthly&quot;,&quot;quarterly&quot;,&quot;yearly&quot;],&quot;callouts&quot;:{&quot;primary_callouts&quot;:{&quot;total_wash_count&quot;:&quot;&quot;},&quot;secondary_callouts&quot;:{&quot;highest_selling_package&quot;:&quot;&quot;,&quot;highest_selling_package_total&quot;:&quot;&quot;,&quot;highest_selling_package_percentage&quot;:&quot;&quot;}},&quot;supporting_text&quot;:&quot;Highest selling package&quot;,&quot;kpi_uri&quot;:&quot;/sales-and-labor/individual-wash&quot;},&quot;data&quot;:{&quot;callouts&quot;:{&quot;primary_callouts&quot;:{&quot;total_wash_count&quot;:2006},&quot;secondary_callouts&quot;:{&quot;highest_selling_package&quot;:&quot;Alpine Express&quot;,&quot;highest_selling_package_total&quot;:805,&quot;highest_selling_package_percentage&quot;:40.129611166500496}},&quot;supporting_text&quot;:&quot;Highest selling package&quot;,&quot;prev_comparison&quot;:-66.04029117995599,&quot;prev_comparison_context&quot;:&quot;from prev_month&quot;,&quot;detail_data&quot;:[{&quot;values&quot;:[{&quot;data_frequency&quot;:&quot;monthly&quot;,&quot;data_breakdown&quot;:{&quot;wash&quot;:2006,&quot;revenue&quot;:27171.0,&quot;grouped_data&quot;:[{&quot;Jun-23&quot;:{&quot;total_wash&quot;:2006,&quot;total_revenue&quot;:27171,&quot;package_breakdown&quot;:[{&quot;package_type&quot;:&quot;Alpine Everest&quot;,&quot;washes&quot;:228,&quot;revenue&quot;:4983},{&quot;package_type&quot;:&quot;Alpine Summit&quot;,&quot;washes&quot;:250,&quot;revenue&quot;:4515},{&quot;package_type&quot;:&quot;Alpine Peak&quot;,&quot;washes&quot;:200,&quot;revenue&quot;:3216},{&quot;package_type&quot;:&quot;Alpine Deluxe&quot;,&quot;washes&quot;:523,&quot;revenue&quot;:6318},{&quot;package_type&quot;:&quot;Alpine Express&quot;,&quot;washes&quot;:805,&quot;revenue&quot;:8139}]}}]}}]}]}}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

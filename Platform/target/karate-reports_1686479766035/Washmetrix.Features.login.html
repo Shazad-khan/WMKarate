@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"96980dbd-9087-4c58-ba01-43385360c360",karate_version:"1.4.0",karate_meta:null});
+  }
+});
+</script>
+
+    <title>Washmetrix.Features.login</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2023-06-11 04:02:39 pm</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:7]"><span>[1:7]</span> <span>Loggin in to Washmetrix</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">Washmetrix/Features/login.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Login to WM</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:7]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:7]</span>
+                <span class="scenario-name">Loggin in to Washmetrix</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:7]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:7]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>url &#39;https://fdn-svc-qa.washmetrix.com/v1/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">16:02:39.034 &lt;&lt; lock released, cached callSingle: classpath:Washmetrix/Features/login.feature
+16:02:39.049 classpath:Washmetrix/Features/login.feature:4
+* url &#39;https://fdn-svc-qa.washmetrix.com/v1/&#39;
+&gt;&gt; classpath:Washmetrix/Features/login.feature:7
+&gt;&gt; karate-config.js failed
+&gt;&gt; ReferenceError: &quot;AuthenticationResult&quot; is not defined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;AuthenticationResult&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/login.feature:4
+</div>   
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.4.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">Washmetrix.Features.login</div>
+      </div>
+      <div class="time-cell passed">2520</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.4">
+      <div class="step-ref bg-step">4</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;https://fdn-svc-qa.washmetrix.com/v1/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.4">16:02:36.485 &gt;&gt; lock acquired, begin callSingle: classpath:Washmetrix/Features/login.feature
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.5">
+      <div class="step-ref bg-step">5</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def user = read(&#39;classpath:Washmetrix/resourses/user.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">66</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.9">
+      <div class="step-ref bg-step">9</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.10">
+      <div class="step-ref bg-step">10</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request user</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.11">
+      <div class="step-ref bg-step">11</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2422</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.11">16:02:36.958 request:
+1 &gt; POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 51
+1 &gt; Host: fdn-svc-qa.washmetrix.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;username&quot;:&quot;test_qa_user&quot;,&quot;password&quot;:&quot;Qwerty123#&quot;}
+
+16:02:39.012 response time in milliseconds: 2048
+1 &lt; 200
+1 &lt; Date: Sun, 11 Jun 2023 10:32:38 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 3980
+1 &lt; Connection: keep-alive
+1 &lt; Server: nginx
+1 &lt; x-response-time: 0.2709925174713135
+{&quot;AuthenticationResult&quot;:{&quot;AccessToken&quot;:&quot;eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6ImMxYmY4M2M1LTQ2NzktNDhiMi1hMDk3LTM0NDRiZmQ0NTIwMSIsImV2ZW50X2lkIjoiZWIwYWU5MTItMWQ3OS00ODMzLThiNDAtZjhhNmRjZjQ1NTc5IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3OTU1OCwiZXhwIjoxNjg2NTY1OTU4LCJpYXQiOjE2ODY0Nzk1NTgsImp0aSI6Ijg5OTI2NDkzLWE1MGQtNDM4NC04MjVkLWJjODU0ZDVjMTBiZSIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.jUBgmS0OXcXBlL62gr2IpiktfvlM3_4YmQM5a7gJXN4E15Z5kMz-8FmDsD7JclcC9jXebMAro6GpiJ84JuPWgR0Q1Hk1fF47kvW_XArOoa_5UQrSK-NALEkWx62P288COI8Pc3jGD4JRkVUaOv9dK-yQmupAyPsOZqtd6K4ud2jgKh8_K__IZ9Ja4VnlP7nXFlqsVMW9UdgSSD60Qa9G8MGLNLItugzNu3-ES55VcrflJaU3SI43y-cqftBCJ3xLufusOoMD2wqfNqSU-4aY4hFbB2-evMQYfR7oghAG7RRUQriwKnXzpRGaU3q_juLA_DsH2Hp4Z3534B47xlUuOA&quot;,&quot;ExpiresIn&quot;:86400,&quot;IdToken&quot;:&quot;eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiJjMWJmODNjNS00Njc5LTQ4YjItYTA5Ny0zNDQ0YmZkNDUyMDEiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiJlYjBhZTkxMi0xZDc5LTQ4MzMtOGI0MC1mOGE2ZGNmNDU1NzkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3OTU1OCwiZXhwIjoxNjg2NTY1OTU4LCJpYXQiOjE2ODY0Nzk1NTgsImp0aSI6IjhkNzIxNzI1LWU4YmMtNDRhMS1iOWI4LTJjYzI5ZDlkYTFhNSIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.j1krJuJFdb4N8oD-dg9sW_noo1Tva9nsCezk4pbxixbIbJ3CbSjWUODpa1iP0jNUZNt7F6xOKtjKySOJrLcWX9pB5m83Ev38AU--6zX0r-klhCDzC-QOD2my_2cD8-_fMHsdbO8qIt5fYxapp9sOCqgtmgZwAJw2jc5s5GokvIQgThe2KX_JZ7ktgaF_bFJoqcO72jQPoIzSzZCGjo7U7NrOsuMVI3PER9Az-DDbLCFmoZ5wsq7aGfxNhSyXF2scftb4hYuMVnYB7EKjsdMQr2PPXLFUE2uXujhzlotRpbw9oUIWuDOHP-VgNgyk6r6ZxwSMxXgkuS7IGQAnsDcBqg&quot;,&quot;RefreshToken&quot;:&quot;eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.I21E_AIueG_EEhixRY5JbAwZrbQmS729RNIzhHiVmCn9Dh47cP_OJCKPicNsR0ok824Ti12wOXgLALjcO2HzdoWq__HmktMahLBnGjuHRH4IO2fbQqp960z0dyVIovekPxTL1pkYDabeLfGE8R-IOtx9kySEVLgd6xRr35EVA-QZj-zQbbjX3DWTTpSHIoa6xOfVz8yCcjV8frBm93IBUefC-a88xgyjCHxvezvi1pkoDCrNFz5AidNeZwvRzOH8cRcuD6mq-EAXxmyn6OeVwg6LWWH6ouFom2YlOS6T3mlmlntcrht2hR7SIAAC7_ICK52cXYhIzTT5HrtDKOpd0g.my0N9nHrfOGNlfaM.Y5KL_oWR1E6V2XcBrA9uXJjOVbpXPNnUKsnWQLs9FE2h_czun1iqHFxylKYkVwDZNQ606quhVoWRTx7h5Itof367cr5U-rhMFfsi8JmjZShrh8HfVThuKIwzBHtsB3h1xOooHbXGWqHVPzMKGigJSsuN4raRhnZsvKFXaEpR_jmfhsf1XkHB-Cyt2qdCxVp3kSwDzBNLsvaQ0rfT6qgmtPf6VXK5huzaNeMKCjqs0gKBLdiLbNppQxtNw1UNXHcBRe-27xhh7kB2zA_I0LZ1NtTIGu_MjN_ip5Cdq270EHZJzCou0Q1l4ll0L1B1uAInRKxrRHD3ZLYpphU0yp0ceK3J4GOEziElb14xIpNGco8jJ_pm-cKQqVWil3Hi4_ZSo1SZnxJZm9UXBtpkt-Ez7WYGx2aygE82sYAqusnK5nlRItqhIKl0tasUSVJmIDV8MAPJtKnRjKHosAMbpXKCAxl0KNBCkl47ADHJemES45OF3jt_j13hRScCRRi1gkt1DlXDM7y971l2B7UtsrJ7UmMAh0nuHPipBLyN_Cc2NMHzJzPupw1ewnWwCyRVSOMinXd9LrusmtlCe7qvkrqoe6MCK9lQRrdSQkqvtQ3sIOUTY35ZFIqtL-1AR_uo7mKOx65bUbcKZK42AA2YxImVPzdjOQfAIXHpRv6OoTPhftqvXFMAlfY2v6dRBorqR_L9Ojc91t-2acQHisWUechcgffn_Ajgdx2KcLYMKkRSjVjjeG6ugSlbHRcuISevHi-h_Fgmap2ntAyRbCf-EbgNz-TkUoBjG2HcLdaO2JgX1X1-TjqOZoYRKKoJBTJFKo7Ai3Y8sYkWEVByAtYLsFtG3XfvyqwxWGKfwX1UUFNXQVbflsv5Cg4pW1Ea-ZzKJsU2hW7anN9wQox5IkAfg8veRiVtYrmCx3qjmFvKKyGKDDq1KD0BbgcKms7Pvkco-hwqYqWnQsR1aUUZSdHqLM0BagzQhZfQzYDnO6B5poU_5W2hkr5oN4CMYOl16SjPwWy7V9KgnjDpeCotSFnnexUS96dKeXHEttUPmWrDxZNavX6CulsxjeUMt7a99LMbhrU6Pzpsrp9kUvrNWbwePdZP7n4be3UeVJDoy63AGJoHEWE7aZAToF4encj_IdC5YfD_mI1QYrb0DEFEpE8m5gKIaxxg7g5eNQzIKBRPX9IUbu4ukWc0FBVbn2u6FKttQNYDWbJvt8X--KuPeRs4IXWtuyjJivxObjMuw6hiFyfdmfY7IoiDl-TTDdgajmMgu4ayZFNQPcAihST7fSY.bFUPgkD7Jat6vtaaRaV7kg&quot;,&quot;TokenType&quot;:&quot;Bearer&quot;},&quot;ChallengeParameters&quot;:{}}
+
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.12">
+      <div class="step-ref bg-step">12</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.13">
+      <div class="step-ref bg-step">13</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.13">16:02:39.027 [print] {
+  &quot;AuthenticationResult&quot;: {
+    &quot;AccessToken&quot;: &quot;eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6ImMxYmY4M2M1LTQ2NzktNDhiMi1hMDk3LTM0NDRiZmQ0NTIwMSIsImV2ZW50X2lkIjoiZWIwYWU5MTItMWQ3OS00ODMzLThiNDAtZjhhNmRjZjQ1NTc5IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3OTU1OCwiZXhwIjoxNjg2NTY1OTU4LCJpYXQiOjE2ODY0Nzk1NTgsImp0aSI6Ijg5OTI2NDkzLWE1MGQtNDM4NC04MjVkLWJjODU0ZDVjMTBiZSIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.jUBgmS0OXcXBlL62gr2IpiktfvlM3_4YmQM5a7gJXN4E15Z5kMz-8FmDsD7JclcC9jXebMAro6GpiJ84JuPWgR0Q1Hk1fF47kvW_XArOoa_5UQrSK-NALEkWx62P288COI8Pc3jGD4JRkVUaOv9dK-yQmupAyPsOZqtd6K4ud2jgKh8_K__IZ9Ja4VnlP7nXFlqsVMW9UdgSSD60Qa9G8MGLNLItugzNu3-ES55VcrflJaU3SI43y-cqftBCJ3xLufusOoMD2wqfNqSU-4aY4hFbB2-evMQYfR7oghAG7RRUQriwKnXzpRGaU3q_juLA_DsH2Hp4Z3534B47xlUuOA&quot;,
+    &quot;ExpiresIn&quot;: 86400,
+    &quot;IdToken&quot;: &quot;eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiJjMWJmODNjNS00Njc5LTQ4YjItYTA5Ny0zNDQ0YmZkNDUyMDEiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiJlYjBhZTkxMi0xZDc5LTQ4MzMtOGI0MC1mOGE2ZGNmNDU1NzkiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3OTU1OCwiZXhwIjoxNjg2NTY1OTU4LCJpYXQiOjE2ODY0Nzk1NTgsImp0aSI6IjhkNzIxNzI1LWU4YmMtNDRhMS1iOWI4LTJjYzI5ZDlkYTFhNSIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.j1krJuJFdb4N8oD-dg9sW_noo1Tva9nsCezk4pbxixbIbJ3CbSjWUODpa1iP0jNUZNt7F6xOKtjKySOJrLcWX9pB5m83Ev38AU--6zX0r-klhCDzC-QOD2my_2cD8-_fMHsdbO8qIt5fYxapp9sOCqgtmgZwAJw2jc5s5GokvIQgThe2KX_JZ7ktgaF_bFJoqcO72jQPoIzSzZCGjo7U7NrOsuMVI3PER9Az-DDbLCFmoZ5wsq7aGfxNhSyXF2scftb4hYuMVnYB7EKjsdMQr2PPXLFUE2uXujhzlotRpbw9oUIWuDOHP-VgNgyk6r6ZxwSMxXgkuS7IGQAnsDcBqg&quot;,
+    &quot;RefreshToken&quot;: &quot;eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.I21E_AIueG_EEhixRY5JbAwZrbQmS729RNIzhHiVmCn9Dh47cP_OJCKPicNsR0ok824Ti12wOXgLALjcO2HzdoWq__HmktMahLBnGjuHRH4IO2fbQqp960z0dyVIovekPxTL1pkYDabeLfGE8R-IOtx9kySEVLgd6xRr35EVA-QZj-zQbbjX3DWTTpSHIoa6xOfVz8yCcjV8frBm93IBUefC-a88xgyjCHxvezvi1pkoDCrNFz5AidNeZwvRzOH8cRcuD6mq-EAXxmyn6OeVwg6LWWH6ouFom2YlOS6T3mlmlntcrht2hR7SIAAC7_ICK52cXYhIzTT5HrtDKOpd0g.my0N9nHrfOGNlfaM.Y5KL_oWR1E6V2XcBrA9uXJjOVbpXPNnUKsnWQLs9FE2h_czun1iqHFxylKYkVwDZNQ606quhVoWRTx7h5Itof367cr5U-rhMFfsi8JmjZShrh8HfVThuKIwzBHtsB3h1xOooHbXGWqHVPzMKGigJSsuN4raRhnZsvKFXaEpR_jmfhsf1XkHB-Cyt2qdCxVp3kSwDzBNLsvaQ0rfT6qgmtPf6VXK5huzaNeMKCjqs0gKBLdiLbNppQxtNw1UNXHcBRe-27xhh7kB2zA_I0LZ1NtTIGu_MjN_ip5Cdq270EHZJzCou0Q1l4ll0L1B1uAInRKxrRHD3ZLYpphU0yp0ceK3J4GOEziElb14xIpNGco8jJ_pm-cKQqVWil3Hi4_ZSo1SZnxJZm9UXBtpkt-Ez7WYGx2aygE82sYAqusnK5nlRItqhIKl0tasUSVJmIDV8MAPJtKnRjKHosAMbpXKCAxl0KNBCkl47ADHJemES45OF3jt_j13hRScCRRi1gkt1DlXDM7y971l2B7UtsrJ7UmMAh0nuHPipBLyN_Cc2NMHzJzPupw1ewnWwCyRVSOMinXd9LrusmtlCe7qvkrqoe6MCK9lQRrdSQkqvtQ3sIOUTY35ZFIqtL-1AR_uo7mKOx65bUbcKZK42AA2YxImVPzdjOQfAIXHpRv6OoTPhftqvXFMAlfY2v6dRBorqR_L9Ojc91t-2acQHisWUechcgffn_Ajgdx2KcLYMKkRSjVjjeG6ugSlbHRcuISevHi-h_Fgmap2ntAyRbCf-EbgNz-TkUoBjG2HcLdaO2JgX1X1-TjqOZoYRKKoJBTJFKo7Ai3Y8sYkWEVByAtYLsFtG3XfvyqwxWGKfwX1UUFNXQVbflsv5Cg4pW1Ea-ZzKJsU2hW7anN9wQox5IkAfg8veRiVtYrmCx3qjmFvKKyGKDDq1KD0BbgcKms7Pvkco-hwqYqWnQsR1aUUZSdHqLM0BagzQhZfQzYDnO6B5poU_5W2hkr5oN4CMYOl16SjPwWy7V9KgnjDpeCotSFnnexUS96dKeXHEttUPmWrDxZNavX6CulsxjeUMt7a99LMbhrU6Pzpsrp9kUvrNWbwePdZP7n4be3UeVJDoy63AGJoHEWE7aZAToF4encj_IdC5YfD_mI1QYrb0DEFEpE8m5gKIaxxg7g5eNQzIKBRPX9IUbu4ukWc0FBVbn2u6FKttQNYDWbJvt8X--KuPeRs4IXWtuyjJivxObjMuw6hiFyfdmfY7IoiDl-TTDdgajmMgu4ayZFNQPcAihST7fSY.bFUPgkD7Jat6vtaaRaV7kg&quot;,
+    &quot;TokenType&quot;: &quot;Bearer&quot;
+  },
+  &quot;ChallengeParameters&quot;: {
+  }
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.15">
+      <div class="step-ref bg-step">15</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accessToken = response.AuthenticationResult.AccessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.16">
+      <div class="step-ref bg-step">16</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.16">16:02:39.033 [print] eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6ImMxYmY4M2M1LTQ2NzktNDhiMi1hMDk3LTM0NDRiZmQ0NTIwMSIsImV2ZW50X2lkIjoiZWIwYWU5MTItMWQ3OS00ODMzLThiNDAtZjhhNmRjZjQ1NTc5IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3OTU1OCwiZXhwIjoxNjg2NTY1OTU4LCJpYXQiOjE2ODY0Nzk1NTgsImp0aSI6Ijg5OTI2NDkzLWE1MGQtNDM4NC04MjVkLWJjODU0ZDVjMTBiZSIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.jUBgmS0OXcXBlL62gr2IpiktfvlM3_4YmQM5a7gJXN4E15Z5kMz-8FmDsD7JclcC9jXebMAro6GpiJ84JuPWgR0Q1Hk1fF47kvW_XArOoa_5UQrSK-NALEkWx62P288COI8Pc3jGD4JRkVUaOv9dK-yQmupAyPsOZqtd6K4ud2jgKh8_K__IZ9Ja4VnlP7nXFlqsVMW9UdgSSD60Qa9G8MGLNLItugzNu3-ES55VcrflJaU3SI43y-cqftBCJ3xLufusOoMD2wqfNqSU-4aY4hFbB2-evMQYfR7oghAG7RRUQriwKnXzpRGaU3q_juLA_DsH2Hp4Z3534B47xlUuOA 
+</div>   
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div data-parent="[1:7]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>def user = read(&#39;classpath:Washmetrix/resourses/user.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5">16:02:39.050 classpath:Washmetrix/Features/login.feature:5
+* def user = read(&#39;classpath:Washmetrix/resourses/user.json&#39;)
+&gt;&gt; classpath:Washmetrix/Features/login.feature:7
+&gt;&gt; karate-config.js failed
+&gt;&gt; ReferenceError: &quot;AuthenticationResult&quot; is not defined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;AuthenticationResult&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/login.feature:4
+classpath:Washmetrix/Features/login.feature:5
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref failed">9</div>
+      
+      <div class="step-cell failed">
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">16:02:39.051 classpath:Washmetrix/Features/login.feature:9
+Given path &#39;login&#39;
+&gt;&gt; classpath:Washmetrix/Features/login.feature:7
+&gt;&gt; karate-config.js failed
+&gt;&gt; ReferenceError: &quot;AuthenticationResult&quot; is not defined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;AuthenticationResult&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/login.feature:4
+classpath:Washmetrix/Features/login.feature:5
+classpath:Washmetrix/Features/login.feature:9
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref failed">10</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>request user</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">16:02:39.051 classpath:Washmetrix/Features/login.feature:10
+And request user
+&gt;&gt; classpath:Washmetrix/Features/login.feature:7
+&gt;&gt; karate-config.js failed
+&gt;&gt; ReferenceError: &quot;AuthenticationResult&quot; is not defined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;AuthenticationResult&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/login.feature:4
+classpath:Washmetrix/Features/login.feature:5
+classpath:Washmetrix/Features/login.feature:9
+classpath:Washmetrix/Features/login.feature:10
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref failed">11</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">16:02:39.051 classpath:Washmetrix/Features/login.feature:11
+When method post
+&gt;&gt; classpath:Washmetrix/Features/login.feature:7
+&gt;&gt; karate-config.js failed
+&gt;&gt; ReferenceError: &quot;AuthenticationResult&quot; is not defined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;AuthenticationResult&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/login.feature:4
+classpath:Washmetrix/Features/login.feature:5
+classpath:Washmetrix/Features/login.feature:9
+classpath:Washmetrix/Features/login.feature:10
+classpath:Washmetrix/Features/login.feature:11
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref failed">12</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.12">16:02:39.051 classpath:Washmetrix/Features/login.feature:12
+Then status 200
+&gt;&gt; classpath:Washmetrix/Features/login.feature:7
+&gt;&gt; karate-config.js failed
+&gt;&gt; ReferenceError: &quot;AuthenticationResult&quot; is not defined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;AuthenticationResult&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/login.feature:4
+classpath:Washmetrix/Features/login.feature:5
+classpath:Washmetrix/Features/login.feature:9
+classpath:Washmetrix/Features/login.feature:10
+classpath:Washmetrix/Features/login.feature:11
+classpath:Washmetrix/Features/login.feature:12
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref failed">13</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">16:02:39.052 classpath:Washmetrix/Features/login.feature:13
+Then print response
+&gt;&gt; classpath:Washmetrix/Features/login.feature:7
+&gt;&gt; karate-config.js failed
+&gt;&gt; ReferenceError: &quot;AuthenticationResult&quot; is not defined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;AuthenticationResult&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/login.feature:4
+classpath:Washmetrix/Features/login.feature:5
+classpath:Washmetrix/Features/login.feature:9
+classpath:Washmetrix/Features/login.feature:10
+classpath:Washmetrix/Features/login.feature:11
+classpath:Washmetrix/Features/login.feature:12
+classpath:Washmetrix/Features/login.feature:13
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref failed">15</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>def accessToken = response.AuthenticationResult.AccessToken</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">16:02:39.052 classpath:Washmetrix/Features/login.feature:15
+* def accessToken = response.AuthenticationResult.AccessToken
+&gt;&gt; classpath:Washmetrix/Features/login.feature:7
+&gt;&gt; karate-config.js failed
+&gt;&gt; ReferenceError: &quot;AuthenticationResult&quot; is not defined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;AuthenticationResult&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/login.feature:4
+classpath:Washmetrix/Features/login.feature:5
+classpath:Washmetrix/Features/login.feature:9
+classpath:Washmetrix/Features/login.feature:10
+classpath:Washmetrix/Features/login.feature:11
+classpath:Washmetrix/Features/login.feature:12
+classpath:Washmetrix/Features/login.feature:13
+classpath:Washmetrix/Features/login.feature:15
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref failed">16</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>print accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.16">16:02:39.052 classpath:Washmetrix/Features/login.feature:16
+And print accessToken
+&gt;&gt; classpath:Washmetrix/Features/login.feature:7
+&gt;&gt; karate-config.js failed
+&gt;&gt; ReferenceError: &quot;AuthenticationResult&quot; is not defined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;AuthenticationResult&quot; is not defined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/login.feature:4
+classpath:Washmetrix/Features/login.feature:5
+classpath:Washmetrix/Features/login.feature:9
+classpath:Washmetrix/Features/login.feature:10
+classpath:Washmetrix/Features/login.feature:11
+classpath:Washmetrix/Features/login.feature:12
+classpath:Washmetrix/Features/login.feature:13
+classpath:Washmetrix/Features/login.feature:15
+classpath:Washmetrix/Features/login.feature:16
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

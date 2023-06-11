@@ -1,0 +1,17 @@
+{
+  "org_id": "7d26c7a5-7dbc-43db-96be-f6f142084614",
+  "user_id": "81e2fbfa-33ef-4673-b169-783853da5772",
+  "locations": [
+    1,
+    2,
+    3
+  ],
+  "time_range": {
+    "start_time": "",
+    "end_time": "",
+    "anchor_time": ""
+  },
+  "frequency": "",
+  "detail_data": true,
+  "comparison_mode": "current"
+}

@@ -1,0 +1,1874 @@
+13:35:07.679 [main] INFO  com.intuit.karate - Karate version: 1.4.0
+13:35:08.117 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:35:08.141 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 6
+13:35:09.264 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:Washmetrix/Features/login.feature
+13:35:09.643 [main] DEBUG com.intuit.karate - request:
+1 > POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 49
+1 > Host: fdn-svc-qa.washmetrix.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"username":"{username}","password":"{password}"}
+
+13:35:12.735 [main] DEBUG com.intuit.karate - response time in milliseconds: 3085
+1 < 400
+1 < Date: Sun, 11 Jun 2023 08:05:12 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 79
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < x-response-time: 0.2840440273284912
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+
+13:35:12.752 [main] ERROR com.intuit.karate - classpath:Washmetrix/Features/login.feature:17
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+13:35:12.759 [main] WARN  com.intuit.karate - callSingle() will cache an exception
+13:35:12.759 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:Washmetrix/Features/login.feature
+13:35:12.759 [main] WARN  com.intuit.karate - callSingle() cached result is an exception
+13:35:12.773 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:4
+* url 'https://fdn-svc-qa.washmetrix.com/v1/'
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+13:35:12.774 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:7
+* def user =
+"""
+{
+"username":"{username}",
+"password":"{password}"
+}
+"""
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+13:35:12.775 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:14
+Given path 'login'
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+Platform/src/test/java/Washmetrix/Features/login.feature:14
+13:35:12.775 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:15
+And request user
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+Platform/src/test/java/Washmetrix/Features/login.feature:14
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+13:35:12.775 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:16
+When method post
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+Platform/src/test/java/Washmetrix/Features/login.feature:14
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+13:35:12.775 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:17
+Then status 200
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+Platform/src/test/java/Washmetrix/Features/login.feature:14
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+13:35:12.775 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:18
+Then print response
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+Platform/src/test/java/Washmetrix/Features/login.feature:14
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+Platform/src/test/java/Washmetrix/Features/login.feature:18
+13:35:13.548 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) Platform/src/test/java/Washmetrix/Features/login.feature
+14:24:34.769 [main] INFO  com.intuit.karate - Karate version: 1.4.0
+14:24:35.379 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:24:35.383 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1686473675379
+14:24:36.540 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:Washmetrix/Features/login.feature
+14:24:36.925 [main] DEBUG com.intuit.karate - request:
+1 > POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 51
+1 > Host: fdn-svc-qa.washmetrix.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"username":"test_qa_user","password":"Qwerty123#"}
+
+14:24:39.282 [main] DEBUG com.intuit.karate - response time in milliseconds: 2355
+1 < 200
+1 < Date: Sun, 11 Jun 2023 08:54:39 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 3980
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < x-response-time: 0.3675382137298584
+{"AuthenticationResult":{"AccessToken":"eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjdkMTMwY2RlLTEwMDMtNDM1Mi05MmM1LTNkZWRmMmNiNjVkNCIsImV2ZW50X2lkIjoiNjRiMmFhNmQtMzA3YS00ZjRhLTljMTAtOTcyMzBhNTc1OTIzIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3MzY3OSwiZXhwIjoxNjg2NTYwMDc5LCJpYXQiOjE2ODY0NzM2NzksImp0aSI6IjIyZWMwYTM4LTMxOWItNDFjZC05OWQ5LWY5MWM2NzYyM2FkZiIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.X3DkWRDGKzf5y9zJphfPCBucqoPu86qAdfLpJUaqfQmehKielLquIZbAXO1T3RuzCilt1re40SbBg-cSMGnvXBbcJyqlr8hJjrQf7PDlmJX28PF2ul57Yt6Pit_LRVcvvVaRZl-f-JhDFqhpmU0Vy5sA7gJHZjXyayJK50o9a1vqXmXhFeUrMkoRoUt0H18OYefOAWuowBphWsQ1B7YM02VWz4iIaKl5xqdBxsBeHYdCUXuzci9Yw4X2YYjTyt3oJuYvDWguKEiz9z48Po5SkN1EXmdivOgIVM-xSv2y82ilrs7L4GqSB1mAcTMopwgi3m03q28kbUBZn_Daeh8hyw","ExpiresIn":86400,"IdToken":"eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiI3ZDEzMGNkZS0xMDAzLTQzNTItOTJjNS0zZGVkZjJjYjY1ZDQiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiI2NGIyYWE2ZC0zMDdhLTRmNGEtOWMxMC05NzIzMGE1NzU5MjMiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3MzY3OSwiZXhwIjoxNjg2NTYwMDc5LCJpYXQiOjE2ODY0NzM2NzksImp0aSI6IjAzY2JhMDE2LTFiNTMtNDQ0Zi1hMDA0LTQxODcxZmNkNTJlOSIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.mEbg-UVRaxS_4cG3tjonYPiCDMZt814w-N_zL0rBLtPF2kRD4hs3vavoXy4XChNNlkoxQbrfMAs0jlQ__2kF4k-s1hX7bwsKwi0D3QyanrC1DkWmh3klzsEVbP2zIGOCqhaNxWqRMK0XbDX6k1glERu73A8GicKTEFaayP7gXPFxIwoA9VIVbttUG5iAyRH8hnXY99VaqYAZtPg0UXTeiqNfoE0AayVeIufKuR80LN8tZgszRYWfHs_GjODjSzbc_VrPjyONSA7aOg4zmJhOXFACmfivmXPAhafDG94sKKkGG8fUIkMQwW3Ro1OYWwTl96fjyqT615YELHZznrs1Dw","RefreshToken":"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.r5GJigKa5gHyn3NqJEJITvsIwIpohfnjXtraNl68iUc58wXtTj3dF5sLJD1Js9v0KnMSjT5yGWia1SsulRYp0N0Okrnn2Y8_1CD3sS5yLdDVKD4nyg4LKvnUfLwVgt8C4bG9D8UAj2hdKMkQLu5ks7scrk0vzgn6_cWPqYf2kFnf8B5MJAWv3b8hsh8oDo1UTOdPPSBlupp-kAT891XWFaywTTP24WQKQONSC2ZEX0o1LR2lMmZcRUoU1XIt48YtCbhoaXx6R88YGtbC3YfI8u_eNKLHMJONMBkjnAR2sZwMEu17t05f_pMHgM2rivK7fNpgZ9zqETfAjbAiwRBLXw.w4LDBmLIx3Il3CAZ.TgZro0sV0UQGhZds2ugb4i-0KBB-4BequUB2a_tbhj_9rFiRdqoaFXwr2c1rdxn_8boNv71B31yv7ljZC2f6QZLYYyMLvkoI3fn2DvY1crtgIfEPxOv2GnVsiwRML3CNiW7BjrR2iYsLUGdvRF3Ymvijt3gLibgxHHPWEcu2_DTUKUmUp23GpPACw1sFMGIlhtSfcMbwgwibZuiWrGMTvepUQZz32dmuaBMAKh7OnPB6-MrAPu4AD4Mb7sYLRWz7kZlZczqX-BQ46DT9MoUZFuxQFKQSo1dk1gYDQT8G3AZGdYuvwKF4_CvU-eQo6AtEmpuQhiFsSFB5NQ0gkBlTgVPPZYwfiy8bie5ULNIp3EzdHFTHSnu02IqErNbxC1yCrT28Bm0189SBSN_6TXTCzN5va4DRBKx_qtIfTVwRjCGGxb1vOWvVXvWCz0UqEv47PY1kN8qYBwkpF5yFXC20eACugYfplmuot93bxZzruRXe7j_iSkcW9I6nlmdFUQS8lPtkWN0Y2IhfhRTdk9EXdK8YIUH8VwFc5Mtq-bB5VhQLhMIgfNHbsFsVxgLZ2xfvvagwoI69Ty827P5jdRqU9QpL8uWEDdw9kXGEZv8XRB8bCGx1jroEGOY1iahQcTYV9EcvOP6XrJRNlzt1rapGl1UA4bHMyZRpGBqxeSBZn0MkDM9PGtQs31Id1GsS9oT1qicSvnc05SF-OBMzhVInfFC6TF_UIvwAHeyJIdtRoFINdSBCvxIuxdy9l4xWhi7VWb3fxaYALzq62l89rftvZDpDjXqC4THV-qbBlAvHniCVSrNBgxt0U5HuM_Xh8gUqSKO21eFcMGPW5vqfz3_AAiDkgJw0p1fiGEert46xpa7tlGfgC5s3AyLi6BtaPnAOUuTRCzKghKtlwdyEoPyfptK1qCKWjI7862Gmlz1D2exIAh2PdCnddw3O8Mvp7z_yzdbpq1AE39-uWczQnc_iN3J_24RqW5iuS49zxp7wkFihibwl_bTl_xlRHlahHZ4d2mATqaIBMQRyvHIM5NITIio6b2HJfnQUHhLXm3G73XTaycy6IYOkzqi-L0RNfE_41Bnbgm9bX8j-PtcPyyT4l8GmmTS-lHbdHLmEnlzI3QVHJUuejnwSswTEQgJ6dWS0_bgolsAwLJvCEtJzLhYa6ucLlJO1I8e8afmWaInGHGlq-Fe9Q7b5A_ZVpb9zYCrDcjy6k1dfwfoOGUst1ejl-UjKccgku4ezD024unOwL0gtXHtatiio_cCfMakLZUXsqnwU_OD04C2NpeI.ZSSvlYxwVDYJvTRHOo_P2A","TokenType":"Bearer"},"ChallengeParameters":{}}
+
+14:24:39.293 [main] INFO  com.intuit.karate - [print] {
+  "AuthenticationResult": {
+    "AccessToken": "eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjdkMTMwY2RlLTEwMDMtNDM1Mi05MmM1LTNkZWRmMmNiNjVkNCIsImV2ZW50X2lkIjoiNjRiMmFhNmQtMzA3YS00ZjRhLTljMTAtOTcyMzBhNTc1OTIzIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3MzY3OSwiZXhwIjoxNjg2NTYwMDc5LCJpYXQiOjE2ODY0NzM2NzksImp0aSI6IjIyZWMwYTM4LTMxOWItNDFjZC05OWQ5LWY5MWM2NzYyM2FkZiIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.X3DkWRDGKzf5y9zJphfPCBucqoPu86qAdfLpJUaqfQmehKielLquIZbAXO1T3RuzCilt1re40SbBg-cSMGnvXBbcJyqlr8hJjrQf7PDlmJX28PF2ul57Yt6Pit_LRVcvvVaRZl-f-JhDFqhpmU0Vy5sA7gJHZjXyayJK50o9a1vqXmXhFeUrMkoRoUt0H18OYefOAWuowBphWsQ1B7YM02VWz4iIaKl5xqdBxsBeHYdCUXuzci9Yw4X2YYjTyt3oJuYvDWguKEiz9z48Po5SkN1EXmdivOgIVM-xSv2y82ilrs7L4GqSB1mAcTMopwgi3m03q28kbUBZn_Daeh8hyw",
+    "ExpiresIn": 86400,
+    "IdToken": "eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiI3ZDEzMGNkZS0xMDAzLTQzNTItOTJjNS0zZGVkZjJjYjY1ZDQiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiI2NGIyYWE2ZC0zMDdhLTRmNGEtOWMxMC05NzIzMGE1NzU5MjMiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3MzY3OSwiZXhwIjoxNjg2NTYwMDc5LCJpYXQiOjE2ODY0NzM2NzksImp0aSI6IjAzY2JhMDE2LTFiNTMtNDQ0Zi1hMDA0LTQxODcxZmNkNTJlOSIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.mEbg-UVRaxS_4cG3tjonYPiCDMZt814w-N_zL0rBLtPF2kRD4hs3vavoXy4XChNNlkoxQbrfMAs0jlQ__2kF4k-s1hX7bwsKwi0D3QyanrC1DkWmh3klzsEVbP2zIGOCqhaNxWqRMK0XbDX6k1glERu73A8GicKTEFaayP7gXPFxIwoA9VIVbttUG5iAyRH8hnXY99VaqYAZtPg0UXTeiqNfoE0AayVeIufKuR80LN8tZgszRYWfHs_GjODjSzbc_VrPjyONSA7aOg4zmJhOXFACmfivmXPAhafDG94sKKkGG8fUIkMQwW3Ro1OYWwTl96fjyqT615YELHZznrs1Dw",
+    "RefreshToken": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.r5GJigKa5gHyn3NqJEJITvsIwIpohfnjXtraNl68iUc58wXtTj3dF5sLJD1Js9v0KnMSjT5yGWia1SsulRYp0N0Okrnn2Y8_1CD3sS5yLdDVKD4nyg4LKvnUfLwVgt8C4bG9D8UAj2hdKMkQLu5ks7scrk0vzgn6_cWPqYf2kFnf8B5MJAWv3b8hsh8oDo1UTOdPPSBlupp-kAT891XWFaywTTP24WQKQONSC2ZEX0o1LR2lMmZcRUoU1XIt48YtCbhoaXx6R88YGtbC3YfI8u_eNKLHMJONMBkjnAR2sZwMEu17t05f_pMHgM2rivK7fNpgZ9zqETfAjbAiwRBLXw.w4LDBmLIx3Il3CAZ.TgZro0sV0UQGhZds2ugb4i-0KBB-4BequUB2a_tbhj_9rFiRdqoaFXwr2c1rdxn_8boNv71B31yv7ljZC2f6QZLYYyMLvkoI3fn2DvY1crtgIfEPxOv2GnVsiwRML3CNiW7BjrR2iYsLUGdvRF3Ymvijt3gLibgxHHPWEcu2_DTUKUmUp23GpPACw1sFMGIlhtSfcMbwgwibZuiWrGMTvepUQZz32dmuaBMAKh7OnPB6-MrAPu4AD4Mb7sYLRWz7kZlZczqX-BQ46DT9MoUZFuxQFKQSo1dk1gYDQT8G3AZGdYuvwKF4_CvU-eQo6AtEmpuQhiFsSFB5NQ0gkBlTgVPPZYwfiy8bie5ULNIp3EzdHFTHSnu02IqErNbxC1yCrT28Bm0189SBSN_6TXTCzN5va4DRBKx_qtIfTVwRjCGGxb1vOWvVXvWCz0UqEv47PY1kN8qYBwkpF5yFXC20eACugYfplmuot93bxZzruRXe7j_iSkcW9I6nlmdFUQS8lPtkWN0Y2IhfhRTdk9EXdK8YIUH8VwFc5Mtq-bB5VhQLhMIgfNHbsFsVxgLZ2xfvvagwoI69Ty827P5jdRqU9QpL8uWEDdw9kXGEZv8XRB8bCGx1jroEGOY1iahQcTYV9EcvOP6XrJRNlzt1rapGl1UA4bHMyZRpGBqxeSBZn0MkDM9PGtQs31Id1GsS9oT1qicSvnc05SF-OBMzhVInfFC6TF_UIvwAHeyJIdtRoFINdSBCvxIuxdy9l4xWhi7VWb3fxaYALzq62l89rftvZDpDjXqC4THV-qbBlAvHniCVSrNBgxt0U5HuM_Xh8gUqSKO21eFcMGPW5vqfz3_AAiDkgJw0p1fiGEert46xpa7tlGfgC5s3AyLi6BtaPnAOUuTRCzKghKtlwdyEoPyfptK1qCKWjI7862Gmlz1D2exIAh2PdCnddw3O8Mvp7z_yzdbpq1AE39-uWczQnc_iN3J_24RqW5iuS49zxp7wkFihibwl_bTl_xlRHlahHZ4d2mATqaIBMQRyvHIM5NITIio6b2HJfnQUHhLXm3G73XTaycy6IYOkzqi-L0RNfE_41Bnbgm9bX8j-PtcPyyT4l8GmmTS-lHbdHLmEnlzI3QVHJUuejnwSswTEQgJ6dWS0_bgolsAwLJvCEtJzLhYa6ucLlJO1I8e8afmWaInGHGlq-Fe9Q7b5A_ZVpb9zYCrDcjy6k1dfwfoOGUst1ejl-UjKccgku4ezD024unOwL0gtXHtatiio_cCfMakLZUXsqnwU_OD04C2NpeI.ZSSvlYxwVDYJvTRHOo_P2A",
+    "TokenType": "Bearer"
+  },
+  "ChallengeParameters": {
+  }
+}
+ 
+14:24:39.296 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:Washmetrix/Features/login.feature
+14:24:39.311 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:4
+* url 'https://fdn-svc-qa.washmetrix.com/v1/'
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+14:24:39.312 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:8
+* def user =
+"""
+{
+"username": "test_qa_user",
+"password": "Qwerty123#"
+}
+"""
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+14:24:39.312 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:15
+Given path 'login'
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+14:24:39.313 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:16
+And request user
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+14:24:39.313 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:17
+When method post
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+14:24:39.313 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:18
+Then status 200
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+Platform/src/test/java/Washmetrix/Features/login.feature:18
+14:24:39.313 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:19
+Then print response
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+Platform/src/test/java/Washmetrix/Features/login.feature:18
+Platform/src/test/java/Washmetrix/Features/login.feature:19
+14:24:40.177 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) Platform/src/test/java/Washmetrix/Features/login.feature
+14:26:52.000 [main] INFO  com.intuit.karate - Karate version: 1.4.0
+14:26:52.468 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:26:52.472 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1686473812469
+14:26:53.691 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:Washmetrix/Features/login.feature
+14:26:54.047 [main] DEBUG com.intuit.karate - request:
+1 > POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 51
+1 > Host: fdn-svc-qa.washmetrix.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"username":"test_qa_user","password":"Qwerty123#"}
+
+14:26:56.215 [main] DEBUG com.intuit.karate - response time in milliseconds: 2156
+1 < 200
+1 < Date: Sun, 11 Jun 2023 08:56:56 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 3980
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < x-response-time: 0.2758314609527588
+{"AuthenticationResult":{"AccessToken":"eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6Ijk5NDUxZGJkLWQ4MmUtNDBkNy04NjQ1LTYxZTMwODVlYjBhOCIsImV2ZW50X2lkIjoiOGE4YzQ3YzItYWQyZS00ZTU3LWE4NTYtNzM2NzU0OTA3YTFlIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3MzgxNiwiZXhwIjoxNjg2NTYwMjE2LCJpYXQiOjE2ODY0NzM4MTYsImp0aSI6ImQ3MWM1ZmFkLTQ2OTctNGQ4OC1hNTJhLWU1ZDM4ODgwMDc2NyIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.PFoF-QR7bHNEdbPzO7FZlcQ0w9HaWkqbmVlB1w3WoWo9Re2s5VUg1U_Kgz6o8twBIL6wRHFYwV8Lki6_5ZvKIRYnxPZbOuWxtXi230Jn7OvARpKgMQ-XfS1qfOgDOtEJ7srdcdBNo4DGkrIGEymeQUQOtckbrUXh9QTWVl8YmntaQ9ya3NpnJwY17oCFkyEPsfDb1KovJ9oyBaPBpuObPAJBWyFT67UXef1Jm3j1W55BETCr3Fk5fVBl4MF83UJob8VXPbovsyLZrohqByoSxdmmVEhwOypAoZpJzR0auWiv6XF1DrLC8oKswAnVSBrphVVbJ9Ut4_k15SnuufwMiw","ExpiresIn":86400,"IdToken":"eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiI5OTQ1MWRiZC1kODJlLTQwZDctODY0NS02MWUzMDg1ZWIwYTgiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiI4YThjNDdjMi1hZDJlLTRlNTctYTg1Ni03MzY3NTQ5MDdhMWUiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3MzgxNiwiZXhwIjoxNjg2NTYwMjE2LCJpYXQiOjE2ODY0NzM4MTYsImp0aSI6IjgxZDc1YTc4LTc0NDAtNDNhNy04ODY2LTBhMzE5ZDA1ZGEwMCIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.PcoDMNujEmgmQoxAwvivpRjzO7VQnueV-8ZRiYDeWxE1DHN3MRWlDZOSv0AVkVVxFl2wenSAhzrZ50M_3ROCq9Zh4BvIG8oeVT6cUW1BXhzAHELHnquhfJ3NAkShm5GFn8Hg4xCG0BUPM8beCCBcoskt4kvEJzNY6usRkw8i1e4UHU1I-UkQfZJ8r6S_7fcDV7PfCXdT-F3YT3KYu77nbBGDBGxY3p-ahubwOWJVUecblQKS5B3MRjeRl1fTZeCcg3v30L0aaq6t01yQZci3bFCfURW-eDscIeO1fpVr21QD_XNX1OWeIN3LxDO_nrSf-XgJN5kiBRqsmB67JxzNJQ","RefreshToken":"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.o7k1AB7aPEoTJSsizDaez1p2Y8-ShO4xnzv3w8lfYNSHUTqP7BQ6oZ-fEqcsyKtIdxN5R8boVbF3WCZB7bYPtrMFzcMSA1yqG-PiaZDMpY5k6-3XNICX3MtU_QTLekv4Ds7OxlNKj748lXs9PjkUUVOHJYT6xwV4xUNFf8U3uFKd0hbSiKK5BE2u7NK-ijM_Ds33Q2I6WNWx5kAoXicJc7GOzrhgdwom0LGGK7WiJ0CbRPMfIfm7X0swsqslsXn2AD3EIR4DTx3k52wXnpSBeF4Yd3_pQD_GX1hy6SdoMtzBFVh0kN65tA8nAVJOnT4xVVELvRFdgRDOSRhB9uC1bw.dLKBnOs7_ZOYcMsL.NYeJwgUdU0XRm0o_EN985u09T5ARMfUluP-dDpI3K3aOf9VGegIDNxalD8oLY8HNzMR5pQwg-zc_dwLXjAypGUoPIG-PpMaBomf53kB4EdqyHliX0fYUFHpzclIsUNlRlu12CvBYFGk3CSGkHxIsDkfC3DDMdtVVYDfCVd-UBzAm7k2Bny7AUx9nj6d9Pkkd5sqfDv2Umk3N1gV9-ZB_O2uRoZkIjUIPCAgSafRqVvrSFO4OWFjo5tgBcd0G4-3Y21B9MNgZllOQJ5lDgleG_QXX65KFeDRWkF2nTWuvm2tTWYeEpPG3dDlTEszu3z392spP8e68s3yvTCz2BSIivxfnHqDOupwslMS3rKZ6bupDa2LF_XvYs8KXnSk_9hzQuTfwdORepNxPZtYVOtUe45cIUrYHDr14uN9planXemadKzuQH3oytFfr5DQiWqujhWxGpXsweN_7WJIf-7nI-LVD0vYFGEUKou9qDsJKuBpwE5Rbi1m968QrlLXr8B11k_7HTGG2xwvLjVfpTyX8V0lEmJHBKiI-_kCr4gJMhqIXcJrqa_fCKiwNAqSlqaA156j4HsKuTNVRbT24bsybjVnykWOe3MxlZaE5sM8YRMkj4lsXnmsx8LKZITr_9Jq2KuwgTOePIOxlZzTIcNH3PwrPdL1Y2WfJvno8QqwDgrwXNOIktnIF_xImD2fpWQIXcPP9B31GMhB70Arc809qnV95MAgiGfx13FhA8Kkhmml76mhwkG_fMDCrHaQVpJeP2qpZIpvI6Z2hJHdRD6I5IFwmODv3hCoQ_wqe0aRoCdwymACW-WD61vo6lcJoRh8v9f6ReJgriY1IgNZ5a_2pBtqo9UmNM9uXQ9Zi9FY2qRBfKXADfrhvdTK4XNjdOzZz2c_HuK5A_YscUJLERELyI0pO4i3gi83DHq_rRnLx3qx7BSwRV1avG-si9BArUCMTUr1fZ5kV7NsM3FHpCmH5Ya8Y_86tH4TZxF2TWiwASkWc1klRT9FH93SAYRcBVxdzkVrhYE6CCKWDMKFlWZ-DAPFpKQhsrcHRrobZnSgtFyYpPGcDsRaCHaSgagXgmm7Tv2c4lBLVIoc9bGWLy-y9bSDI0awmmXkYCHqKansorVCoBbgkqreYLIaP-OKBBrF2easqOqSfCdwPID1y4jNmgI-o4ZDPM0BffBamu0N7JKZTukAz3hDw4ixw1hDT4CtJOc2lfUgCpSmv27yvMZvPJxlslojhiBRrac6UNqlSLcDFzwXuW9Vtv4eE19IpQUfZCvvWTe89P_lDBWA.IPpeUAj5jD8cQCb_GyZ_mA","TokenType":"Bearer"},"ChallengeParameters":{}}
+
+14:26:56.231 [main] INFO  com.intuit.karate - [print] {
+  "AuthenticationResult": {
+    "AccessToken": "eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6Ijk5NDUxZGJkLWQ4MmUtNDBkNy04NjQ1LTYxZTMwODVlYjBhOCIsImV2ZW50X2lkIjoiOGE4YzQ3YzItYWQyZS00ZTU3LWE4NTYtNzM2NzU0OTA3YTFlIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3MzgxNiwiZXhwIjoxNjg2NTYwMjE2LCJpYXQiOjE2ODY0NzM4MTYsImp0aSI6ImQ3MWM1ZmFkLTQ2OTctNGQ4OC1hNTJhLWU1ZDM4ODgwMDc2NyIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.PFoF-QR7bHNEdbPzO7FZlcQ0w9HaWkqbmVlB1w3WoWo9Re2s5VUg1U_Kgz6o8twBIL6wRHFYwV8Lki6_5ZvKIRYnxPZbOuWxtXi230Jn7OvARpKgMQ-XfS1qfOgDOtEJ7srdcdBNo4DGkrIGEymeQUQOtckbrUXh9QTWVl8YmntaQ9ya3NpnJwY17oCFkyEPsfDb1KovJ9oyBaPBpuObPAJBWyFT67UXef1Jm3j1W55BETCr3Fk5fVBl4MF83UJob8VXPbovsyLZrohqByoSxdmmVEhwOypAoZpJzR0auWiv6XF1DrLC8oKswAnVSBrphVVbJ9Ut4_k15SnuufwMiw",
+    "ExpiresIn": 86400,
+    "IdToken": "eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiI5OTQ1MWRiZC1kODJlLTQwZDctODY0NS02MWUzMDg1ZWIwYTgiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiI4YThjNDdjMi1hZDJlLTRlNTctYTg1Ni03MzY3NTQ5MDdhMWUiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3MzgxNiwiZXhwIjoxNjg2NTYwMjE2LCJpYXQiOjE2ODY0NzM4MTYsImp0aSI6IjgxZDc1YTc4LTc0NDAtNDNhNy04ODY2LTBhMzE5ZDA1ZGEwMCIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.PcoDMNujEmgmQoxAwvivpRjzO7VQnueV-8ZRiYDeWxE1DHN3MRWlDZOSv0AVkVVxFl2wenSAhzrZ50M_3ROCq9Zh4BvIG8oeVT6cUW1BXhzAHELHnquhfJ3NAkShm5GFn8Hg4xCG0BUPM8beCCBcoskt4kvEJzNY6usRkw8i1e4UHU1I-UkQfZJ8r6S_7fcDV7PfCXdT-F3YT3KYu77nbBGDBGxY3p-ahubwOWJVUecblQKS5B3MRjeRl1fTZeCcg3v30L0aaq6t01yQZci3bFCfURW-eDscIeO1fpVr21QD_XNX1OWeIN3LxDO_nrSf-XgJN5kiBRqsmB67JxzNJQ",
+    "RefreshToken": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.o7k1AB7aPEoTJSsizDaez1p2Y8-ShO4xnzv3w8lfYNSHUTqP7BQ6oZ-fEqcsyKtIdxN5R8boVbF3WCZB7bYPtrMFzcMSA1yqG-PiaZDMpY5k6-3XNICX3MtU_QTLekv4Ds7OxlNKj748lXs9PjkUUVOHJYT6xwV4xUNFf8U3uFKd0hbSiKK5BE2u7NK-ijM_Ds33Q2I6WNWx5kAoXicJc7GOzrhgdwom0LGGK7WiJ0CbRPMfIfm7X0swsqslsXn2AD3EIR4DTx3k52wXnpSBeF4Yd3_pQD_GX1hy6SdoMtzBFVh0kN65tA8nAVJOnT4xVVELvRFdgRDOSRhB9uC1bw.dLKBnOs7_ZOYcMsL.NYeJwgUdU0XRm0o_EN985u09T5ARMfUluP-dDpI3K3aOf9VGegIDNxalD8oLY8HNzMR5pQwg-zc_dwLXjAypGUoPIG-PpMaBomf53kB4EdqyHliX0fYUFHpzclIsUNlRlu12CvBYFGk3CSGkHxIsDkfC3DDMdtVVYDfCVd-UBzAm7k2Bny7AUx9nj6d9Pkkd5sqfDv2Umk3N1gV9-ZB_O2uRoZkIjUIPCAgSafRqVvrSFO4OWFjo5tgBcd0G4-3Y21B9MNgZllOQJ5lDgleG_QXX65KFeDRWkF2nTWuvm2tTWYeEpPG3dDlTEszu3z392spP8e68s3yvTCz2BSIivxfnHqDOupwslMS3rKZ6bupDa2LF_XvYs8KXnSk_9hzQuTfwdORepNxPZtYVOtUe45cIUrYHDr14uN9planXemadKzuQH3oytFfr5DQiWqujhWxGpXsweN_7WJIf-7nI-LVD0vYFGEUKou9qDsJKuBpwE5Rbi1m968QrlLXr8B11k_7HTGG2xwvLjVfpTyX8V0lEmJHBKiI-_kCr4gJMhqIXcJrqa_fCKiwNAqSlqaA156j4HsKuTNVRbT24bsybjVnykWOe3MxlZaE5sM8YRMkj4lsXnmsx8LKZITr_9Jq2KuwgTOePIOxlZzTIcNH3PwrPdL1Y2WfJvno8QqwDgrwXNOIktnIF_xImD2fpWQIXcPP9B31GMhB70Arc809qnV95MAgiGfx13FhA8Kkhmml76mhwkG_fMDCrHaQVpJeP2qpZIpvI6Z2hJHdRD6I5IFwmODv3hCoQ_wqe0aRoCdwymACW-WD61vo6lcJoRh8v9f6ReJgriY1IgNZ5a_2pBtqo9UmNM9uXQ9Zi9FY2qRBfKXADfrhvdTK4XNjdOzZz2c_HuK5A_YscUJLERELyI0pO4i3gi83DHq_rRnLx3qx7BSwRV1avG-si9BArUCMTUr1fZ5kV7NsM3FHpCmH5Ya8Y_86tH4TZxF2TWiwASkWc1klRT9FH93SAYRcBVxdzkVrhYE6CCKWDMKFlWZ-DAPFpKQhsrcHRrobZnSgtFyYpPGcDsRaCHaSgagXgmm7Tv2c4lBLVIoc9bGWLy-y9bSDI0awmmXkYCHqKansorVCoBbgkqreYLIaP-OKBBrF2easqOqSfCdwPID1y4jNmgI-o4ZDPM0BffBamu0N7JKZTukAz3hDw4ixw1hDT4CtJOc2lfUgCpSmv27yvMZvPJxlslojhiBRrac6UNqlSLcDFzwXuW9Vtv4eE19IpQUfZCvvWTe89P_lDBWA.IPpeUAj5jD8cQCb_GyZ_mA",
+    "TokenType": "Bearer"
+  },
+  "ChallengeParameters": {
+  }
+}
+ 
+14:26:56.236 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:Washmetrix/Features/login.feature
+14:26:56.252 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:4
+* url 'https://fdn-svc-qa.washmetrix.com/v1/'
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+14:26:56.253 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:8
+* def user =
+"""
+{
+"username": "test_qa_user",
+"password": "Qwerty123#"
+}
+"""
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+14:26:56.253 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:15
+Given path 'login'
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+14:26:56.253 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:16
+And request user
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+14:26:56.253 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:17
+When method post
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+14:26:56.253 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:18
+Then status 200
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+Platform/src/test/java/Washmetrix/Features/login.feature:18
+14:26:56.253 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:19
+Then print response
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+Platform/src/test/java/Washmetrix/Features/login.feature:18
+Platform/src/test/java/Washmetrix/Features/login.feature:19
+14:26:56.253 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/login.feature:21
+* def accessToken = response.AuthenticationResult.AccessToken
+>> Platform/src/test/java/Washmetrix/Features/login.feature:6
+>> karate-config.js failed
+>> TypeError: Cannot set property "accessToken" of undefined
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#'
+14:   }
+15:   if (env == 'dev') {
+16:     // customize
+17:     // e.g. config.foo = 'bar';
+18:   } else if (env == 'e2e') {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+<<<<
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot set property "accessToken" of undefined
+- <js>.fn(Unnamed:4)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:8
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+Platform/src/test/java/Washmetrix/Features/login.feature:18
+Platform/src/test/java/Washmetrix/Features/login.feature:19
+Platform/src/test/java/Washmetrix/Features/login.feature:21
+14:26:56.999 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) Platform/src/test/java/Washmetrix/Features/login.feature
+14:30:08.645 [main] INFO  com.intuit.karate - Karate version: 1.4.0
+14:30:09.147 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:30:09.152 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1686474009148
+14:30:10.379 [main] INFO  com.intuit.karate - karate.env system property was: null 
+14:30:10.748 [main] DEBUG com.intuit.karate - request:
+1 > POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 51
+1 > Host: fdn-svc-qa.washmetrix.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"username":"test_qa_user","password":"Qwerty123#"}
+
+14:30:12.895 [main] DEBUG com.intuit.karate - response time in milliseconds: 2136
+1 < 200
+1 < Date: Sun, 11 Jun 2023 09:00:12 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 3980
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < x-response-time: 0.2792057991027832
+{"AuthenticationResult":{"AccessToken":"eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjA4ZmU2OGJjLWQ1NDctNDY4OS04MDJmLWJmYTc3OTAwNWM3MCIsImV2ZW50X2lkIjoiMDJjZmM4N2EtMTY3Zi00MDY2LWJmZWItNGY5M2IwYmFiMzk4IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3NDAxMiwiZXhwIjoxNjg2NTYwNDEyLCJpYXQiOjE2ODY0NzQwMTIsImp0aSI6IjM1YzNkMWZjLTNiNWYtNDIwNy1iYjQ5LTNkMmFmZjJkNWNmNCIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.JND4ohnXFVGJ3nJzSQ2Zc4l22Oxoz9EUIniWWiJa_hyKaSpatJIV6ItwzAVa4xBPlSqmsGDfLOzcJTwYqojcAx8xK94J1WLT67fMyaCuANusSPFVZe-WoRjZeoqlCU3LRMh-mtRzAbS49Kt1HzTUgQpKs2NOUg2VZcT_gmiCxyGv2a9c1JvypXbQK34leC-Qzm-QaHxeiUTAvBUJ07uZuTyAODfxbyL52Bacnu7Kh5uvQVgYSrfDeNZkDXHMbJYul9dRmBumAasghiMWkaoFiXzxsoqd96wEAwCD_hlxRub-vgnTO2isE6P3QVjzs2jnyO5hZvbHKVQZwBDTWkZy9A","ExpiresIn":86400,"IdToken":"eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiIwOGZlNjhiYy1kNTQ3LTQ2ODktODAyZi1iZmE3NzkwMDVjNzAiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiIwMmNmYzg3YS0xNjdmLTQwNjYtYmZlYi00ZjkzYjBiYWIzOTgiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3NDAxMiwiZXhwIjoxNjg2NTYwNDEyLCJpYXQiOjE2ODY0NzQwMTIsImp0aSI6ImZmNzM1ZmIxLTA3YTktNGM2OS04NmJmLWRkZTgyY2JkNjUyYyIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.tcYUXXc3T9SJPGBA7Ggm-xiIPfRokOCvGIJlPoHsuZZSakrvHMdPIpCl2UpCU_l3gYGeG6B1vOgVhBFiC35W92mDtHAGwqTsOqHBaK62Njoy8x0Fp640D4KAlq7yCwBG5K1Doap5qdJG4GU-uw-OTOemywhoiibNJsrhgTkKR1FlS8oNvKoDRaKBy5ceddOit7TDKIHiY2wmCjy1OOT8prMjlcva0Uq5CyR0O4ViHOn4sDBcpofcFTa9A8lkmA1T_sG5RY1rfmRN0o4e4-JUmtuAU-GGyGmnq_aYbEzc1MlGzvp1fft2dfwdfQ5HIs3MW79-scX_0PchKRecMKid1w","RefreshToken":"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.U5DTclkY36dQF6Wl7eqq43qtk4rBth0gQSiuq5c8OwHLRMiQHA1L83fTr6xjYn1B-TYh88Vy6Yr66xQIqSg2n10Sh9yc8qnWYm7BLLMdScyQLLD3AQ2XCXJHHrdVq5GrXlaXniXdMoYa32VQilQb978ns7fUZgyTjUddXqTZ8VFH9cmBmK4yC0vDUgmSKPKUZCgIngsp_8Cd567pZ-hVaB0H3UcLvBQjDJtZkNYtAH6FQPcOPARjdWNjkMo8PXAjBN0QEjSDGAqo6V_5fZNEJkKVGvdEITHLQ97kL5V3lgOckawf8jpmeNwy3F-uNTm4ZHLfD38D6cVuwC5UlDqJoA.FdPsy5_7wHa5-ewe.6NXi0dLPKoYNLu_kkWQmcd2ALUW52k48dLIqKFLJPuaVMAGK3o6XkfjBlzh8TGa2P45R5LZqEabvlSl89Nx9gp-_js-ngX1JBlvW8GmGTLnyd-m0v5u5ccFv98aFaEtHdceE2NWrF1lx15nJQJEinh6gJUv7kzGDhtXjjcfGE7_almNYX-5lWCsNz7m3Ie3B-ihLdbL8gPBFZwjCkuyzxYy2msesNUcxC9outsjxMTBHmtVe4khGqgtxBhnAiWO7XvPxypYEOh81oqU4Q0qtB6ORt0GBo8NHAPQl5JAMY48QE69qYxStuEDadAXMHfyCEuLr6iZj_vgUNFfIq-noZ_sx6uN3lbvexK1RrNMrvuMeuJOuQKci-3L6a3VSClGmjhYovew750OfT66utNdLudU5g2VXBSw7YD3CrVqHC1yOvL_FPZGYP5bDPH7KWZ-RJLSl1gtXtZJDzjk7GNvL2Zp_kay6KjGudClaf0765tZtoZ3xOLm5wYm8BR_QogKAyjSBEg3GQM57ypa1BQfZQv10LqjdG5_DkYu4ssmxji0BkCCGtq0LWUuVSSaIwegQtJXjLkMtr_j59yWKxkDU6X4Qca8Prfhx8bweokiNfn3uLXK5wHq1u8GMcKObUfuoibGL8bwPKce_pgbHs0qvxX4cdsxCUA98ODc1fO2cF-ztHuEBfTpFGDg4kxs3Pmmt629hluRJHbbXbBAy0Z7aa52XZ2uNlDhTLr1qPfO_iTT6_iCpo0tc9ZZycdY5_7jdUm8i2goGfYfyhVndiYdvsjQdXmj8oFL1l3bp2m_48S4xPLnG4ntVsjXg0bEdGu5-zVMIhoZGASkBUQo2fT8IRu12v1SuBGGEWP6uiqvRw-8BOveVj3nfOF5bCNb-nw9DsvsHfAOtZZ48mXvNJopSr-p6MSrCa1hfeF6T-sAEBLT2AFSK7BDTf9aaMGMkkteANEVIQwUVUVMDUMaH4q9tiIpD_zBVrEbQQU8hdgI9OKqs2q6Ridj5EviymxlgmiVnY-1xPrfxpTwz4-rXp5-Seq9IYJcXsQ9RSZSxC05ZRgm8cKmINqARyRtrP7Zqn6m1Grxu2r0r-uvIOqYg5FpjukDeRocjdI7Du9kOCgNWyZX02LKO20legFu3ndWcEMAJCatk_TIDDhDXy0ZExw0E1BgyiSdMIxYG1wG8hg0Un5k-i54jilqUcf03sqGZbqZQ_rjcQITnI2VOrQucNgE2JFQ3EpkbUGR0ZgfXCd0GWPWCuQnQjN9ArTd6SBtK2L0mHcm6aMNmlnZNhBw.NQrS8irYtney3TZbYarheg","TokenType":"Bearer"},"ChallengeParameters":{}}
+
+14:30:12.913 [main] INFO  com.intuit.karate - [print] {
+  "AuthenticationResult": {
+    "AccessToken": "eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjA4ZmU2OGJjLWQ1NDctNDY4OS04MDJmLWJmYTc3OTAwNWM3MCIsImV2ZW50X2lkIjoiMDJjZmM4N2EtMTY3Zi00MDY2LWJmZWItNGY5M2IwYmFiMzk4IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3NDAxMiwiZXhwIjoxNjg2NTYwNDEyLCJpYXQiOjE2ODY0NzQwMTIsImp0aSI6IjM1YzNkMWZjLTNiNWYtNDIwNy1iYjQ5LTNkMmFmZjJkNWNmNCIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.JND4ohnXFVGJ3nJzSQ2Zc4l22Oxoz9EUIniWWiJa_hyKaSpatJIV6ItwzAVa4xBPlSqmsGDfLOzcJTwYqojcAx8xK94J1WLT67fMyaCuANusSPFVZe-WoRjZeoqlCU3LRMh-mtRzAbS49Kt1HzTUgQpKs2NOUg2VZcT_gmiCxyGv2a9c1JvypXbQK34leC-Qzm-QaHxeiUTAvBUJ07uZuTyAODfxbyL52Bacnu7Kh5uvQVgYSrfDeNZkDXHMbJYul9dRmBumAasghiMWkaoFiXzxsoqd96wEAwCD_hlxRub-vgnTO2isE6P3QVjzs2jnyO5hZvbHKVQZwBDTWkZy9A",
+    "ExpiresIn": 86400,
+    "IdToken": "eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiIwOGZlNjhiYy1kNTQ3LTQ2ODktODAyZi1iZmE3NzkwMDVjNzAiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiIwMmNmYzg3YS0xNjdmLTQwNjYtYmZlYi00ZjkzYjBiYWIzOTgiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3NDAxMiwiZXhwIjoxNjg2NTYwNDEyLCJpYXQiOjE2ODY0NzQwMTIsImp0aSI6ImZmNzM1ZmIxLTA3YTktNGM2OS04NmJmLWRkZTgyY2JkNjUyYyIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.tcYUXXc3T9SJPGBA7Ggm-xiIPfRokOCvGIJlPoHsuZZSakrvHMdPIpCl2UpCU_l3gYGeG6B1vOgVhBFiC35W92mDtHAGwqTsOqHBaK62Njoy8x0Fp640D4KAlq7yCwBG5K1Doap5qdJG4GU-uw-OTOemywhoiibNJsrhgTkKR1FlS8oNvKoDRaKBy5ceddOit7TDKIHiY2wmCjy1OOT8prMjlcva0Uq5CyR0O4ViHOn4sDBcpofcFTa9A8lkmA1T_sG5RY1rfmRN0o4e4-JUmtuAU-GGyGmnq_aYbEzc1MlGzvp1fft2dfwdfQ5HIs3MW79-scX_0PchKRecMKid1w",
+    "RefreshToken": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.U5DTclkY36dQF6Wl7eqq43qtk4rBth0gQSiuq5c8OwHLRMiQHA1L83fTr6xjYn1B-TYh88Vy6Yr66xQIqSg2n10Sh9yc8qnWYm7BLLMdScyQLLD3AQ2XCXJHHrdVq5GrXlaXniXdMoYa32VQilQb978ns7fUZgyTjUddXqTZ8VFH9cmBmK4yC0vDUgmSKPKUZCgIngsp_8Cd567pZ-hVaB0H3UcLvBQjDJtZkNYtAH6FQPcOPARjdWNjkMo8PXAjBN0QEjSDGAqo6V_5fZNEJkKVGvdEITHLQ97kL5V3lgOckawf8jpmeNwy3F-uNTm4ZHLfD38D6cVuwC5UlDqJoA.FdPsy5_7wHa5-ewe.6NXi0dLPKoYNLu_kkWQmcd2ALUW52k48dLIqKFLJPuaVMAGK3o6XkfjBlzh8TGa2P45R5LZqEabvlSl89Nx9gp-_js-ngX1JBlvW8GmGTLnyd-m0v5u5ccFv98aFaEtHdceE2NWrF1lx15nJQJEinh6gJUv7kzGDhtXjjcfGE7_almNYX-5lWCsNz7m3Ie3B-ihLdbL8gPBFZwjCkuyzxYy2msesNUcxC9outsjxMTBHmtVe4khGqgtxBhnAiWO7XvPxypYEOh81oqU4Q0qtB6ORt0GBo8NHAPQl5JAMY48QE69qYxStuEDadAXMHfyCEuLr6iZj_vgUNFfIq-noZ_sx6uN3lbvexK1RrNMrvuMeuJOuQKci-3L6a3VSClGmjhYovew750OfT66utNdLudU5g2VXBSw7YD3CrVqHC1yOvL_FPZGYP5bDPH7KWZ-RJLSl1gtXtZJDzjk7GNvL2Zp_kay6KjGudClaf0765tZtoZ3xOLm5wYm8BR_QogKAyjSBEg3GQM57ypa1BQfZQv10LqjdG5_DkYu4ssmxji0BkCCGtq0LWUuVSSaIwegQtJXjLkMtr_j59yWKxkDU6X4Qca8Prfhx8bweokiNfn3uLXK5wHq1u8GMcKObUfuoibGL8bwPKce_pgbHs0qvxX4cdsxCUA98ODc1fO2cF-ztHuEBfTpFGDg4kxs3Pmmt629hluRJHbbXbBAy0Z7aa52XZ2uNlDhTLr1qPfO_iTT6_iCpo0tc9ZZycdY5_7jdUm8i2goGfYfyhVndiYdvsjQdXmj8oFL1l3bp2m_48S4xPLnG4ntVsjXg0bEdGu5-zVMIhoZGASkBUQo2fT8IRu12v1SuBGGEWP6uiqvRw-8BOveVj3nfOF5bCNb-nw9DsvsHfAOtZZ48mXvNJopSr-p6MSrCa1hfeF6T-sAEBLT2AFSK7BDTf9aaMGMkkteANEVIQwUVUVMDUMaH4q9tiIpD_zBVrEbQQU8hdgI9OKqs2q6Ridj5EviymxlgmiVnY-1xPrfxpTwz4-rXp5-Seq9IYJcXsQ9RSZSxC05ZRgm8cKmINqARyRtrP7Zqn6m1Grxu2r0r-uvIOqYg5FpjukDeRocjdI7Du9kOCgNWyZX02LKO20legFu3ndWcEMAJCatk_TIDDhDXy0ZExw0E1BgyiSdMIxYG1wG8hg0Un5k-i54jilqUcf03sqGZbqZQ_rjcQITnI2VOrQucNgE2JFQ3EpkbUGR0ZgfXCd0GWPWCuQnQjN9ArTd6SBtK2L0mHcm6aMNmlnZNhBw.NQrS8irYtney3TZbYarheg",
+    "TokenType": "Bearer"
+  },
+  "ChallengeParameters": {
+  }
+}
+ 
+14:30:13.578 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) Platform/src/test/java/Washmetrix/Features/login.feature
+14:31:00.851 [main] INFO  com.intuit.karate - Karate version: 1.4.0
+14:31:01.284 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:31:01.291 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1686474061285
+14:31:02.418 [main] INFO  com.intuit.karate - karate.env system property was: null 
+14:31:02.792 [main] DEBUG com.intuit.karate - request:
+1 > POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 51
+1 > Host: fdn-svc-qa.washmetrix.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"username":"test_qa_user","password":"Qwerty123#"}
+
+14:31:05.012 [main] DEBUG com.intuit.karate - response time in milliseconds: 2217
+1 < 200
+1 < Date: Sun, 11 Jun 2023 09:01:04 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 3980
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < x-response-time: 0.37890172004699707
+{"AuthenticationResult":{"AccessToken":"eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjUzODVkNmFiLTBlZTItNGVmNS05YWY2LWU2ZGUxMjc2NTAxMiIsImV2ZW50X2lkIjoiYmFkMjYyYzUtY2Y4Ny00NGU2LTk1ZDctZDE2NWJhZGU2ZGRhIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3NDA2NCwiZXhwIjoxNjg2NTYwNDY0LCJpYXQiOjE2ODY0NzQwNjQsImp0aSI6ImY3NzlkOWM5LTM5NjEtNDQ3Ni05ZWU2LWM5M2QzMWMyMjkwMiIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.CoP-ZVZnnb4utizXlJgkHUGWm9T-LlBgtV5rVp2WzBWN2oA77Db3MPboj6RXozfkd-jPxzVQL1zJsFuAhsBySWHmfsIKcsHCIRJjulc2fFZ-M6LQx6kL5vj-JrF8rKtqc98_oEJl4TSz0NGf4ype64cCAy5dPyeigIRtK2l09GKQCWoVxa44Tdbr2D2KKdIdCT2W6mEEFjxwQK8u4OOe1-DKolSxl26t-9iBLMdochFDPcjA9l4ew6D5NoM64oeZN6OivUYZvEm8XXGNn3-rSqYCZ226HMsfQ9xpih5GSfF39a0jqYIxUSmGPDlA76OCaq-j-A1p37PWfTaJDiypIg","ExpiresIn":86400,"IdToken":"eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiI1Mzg1ZDZhYi0wZWUyLTRlZjUtOWFmNi1lNmRlMTI3NjUwMTIiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiJiYWQyNjJjNS1jZjg3LTQ0ZTYtOTVkNy1kMTY1YmFkZTZkZGEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3NDA2NCwiZXhwIjoxNjg2NTYwNDY0LCJpYXQiOjE2ODY0NzQwNjQsImp0aSI6IjEwYzhlZDFkLTg0YmQtNGM1MS05NTFmLTFlYjBkZDE5OGE4OSIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.ZZzEgU-RSWt09UJ04P79z7Ss5fmn5sioq-oSaJ7pMf8Ezb-fZ3Jksz0nGKtH6tycWA1Vek2DEbLO78ggO-yI9vvLMZIW0bzUMDWSOxNweELrhBqPOEgRwVx-ilKkdwEcMW2Y6VHUYLtmGHMGMUfk0Ag7ZeoCNpYZaP03kWwiF30OYv3o7Hmuhm0GU8xhvQ3XDsPwdao73dpzPSLIelqQ87z0vCgqqxLRB7WVRJQsi2IUx5oaCEGwibvyt3qDzjQHGHwC8L5zyweik6JLbZGb_wym078XHn_dqNoaz0YFHwX8x6ZJel8QhsXT3sUy9faQdbInqHA6qDIsGJWwhUpVyQ","RefreshToken":"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.fKyMxSYvFX4ySltwGI3HeRBkuAdirT5U2vyvOLIJE5WzsA0DtIU-25sw-f6PWai5Npr6UHOuHqvS5tuGtWFjUS6UyYwoWsU3sr0soyVOfQDks9k5lN31tfD5x_OETWD8TY3gZIMGiLHEASRCpy5hKe6L8TVDKWVXCC3nW4XzKu0yF3aPPwH1vNfSvC4sGLMY3LBXgp16RLDxlEl6ZqKCYbxsMoZt4D9ruGsdXjWFlR1i4X_GekX3XCHKhhzxHVuPcZrf1g7Iv8lG-jNzKjfSVL4dB_0bn4XfAHhQ7hmObbdEy-SeGhfVFZu5mqGUgAgNXDfLRUeMYGdWEN-ia-vMFg.uxvgYqMPnrQdYrjT.qSvJd4R-uukJ0qJBx9_mTNsYne_zGeDLJ-fJod6mCVx9N-N4iSL1uXdmCLMiJk-ICSUVXOPcy5TkG-mDEvLjGgMhZjoxb4v5PLKivkhYlFkhLCJn0lu31OFNb5LOrJqwAhbmEZx5FYhWjbANts7dlhfFGIhxtpICLyQ4l-_YqanahYLCh_UBkbWsdpLoHYnrYVw9GjMpR7zoilpkiJA2i91xhYYDJIbNaATBbVGUeWdWj7mKjFfUSaniy7XJLnvnCs74luenlBCsz4mEfDPWYv5U_tRvsczavMRyy_mFQukyKZFbdUK_iVZGpOnZkRh0b-ywnuiQbOMAOV22f2xWKxTkq72a_WxsH_tBkNw9QZZTlWj6TUGlPzv--zQoSyvhKvFgrTJBmU5LcDnu1cnXw4Iz_infD7mY2-C-e3fIlT7RdQLvyirL71y7LlTVN0wPd_9KBor0E72S-cHu9EqvJdQJt3nuEI2tTCGdvimSRkIqgt1wwYKtzQezfc1qGBg1o1cDyj-nuy3I-6nQ5N8o49ovcIsuRjyiaFfmB4a6h-3CkR15zvOTFUTqngAI9q7J3YcaBBpdl9j3LqQchDDAkYWi3SIroat2uwxKxkA7pM0bB-OUN04bCjUBBTuGUdaMtNdrYOYnlRRFz-0c46Yl0Mq89eaLIJstDcFkJ2_KFblM2qjYIJmL7rJDH6CYYVpLtSn8wR0UvgVBCEe8qDeZH3FzGyoyu1e2Va5dWd77-7AL6XhiBi3e240b1sKKDCk6XmAWG-owtKJOiyK95QejvJffv84gAv7MpLR3MSepV-9YNDgJ1AOXiLoCP0U9jOo2S9xbGQWCwZo-YoY1UFYs6TuBVSwL-oOP9fOxGXvEnuNPCrpCZi6O8C5UUvhwPQy6kBoahRow_zbAAdUDu1sLV98Xc8UX1F414IImQzc--N2O8Dp6jCDlNa9JoO6IJI-iTI-i7BZu7a7YJ2sPAG3Vy4VHo-tYWIm_jm9QAW-RCzItrccgHEMeX2qiaCwQP_aA2UKdFnmv_cgsS_QwM2sdupNpZclFu0qOOsi6_AWP6dT4l1x_57IcyU7ewzh-ufC5WPH4VolorpAvHjsQmtqTGos_T8rHfDkZap6PYUH7qVyxLzkuS1BOUbK599NZVJrFmokUC8E1Jn4HBrxegzOVfeLdDs8rZTyEfVpkg9Unrnb1nM6UFyn7qHNROWlWdl0hA5-s07yF4XUzy9KsbUR58jNh0YI6YrVV9xdQPfavmyC_N1RACiCYVSos3Kvp-CwRk6LlBRMMyeaHz28.kc5YgPyaNljTfHNqV2_gtw","TokenType":"Bearer"},"ChallengeParameters":{}}
+
+14:31:05.021 [main] INFO  com.intuit.karate - [print] {
+  "AuthenticationResult": {
+    "AccessToken": "eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjUzODVkNmFiLTBlZTItNGVmNS05YWY2LWU2ZGUxMjc2NTAxMiIsImV2ZW50X2lkIjoiYmFkMjYyYzUtY2Y4Ny00NGU2LTk1ZDctZDE2NWJhZGU2ZGRhIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3NDA2NCwiZXhwIjoxNjg2NTYwNDY0LCJpYXQiOjE2ODY0NzQwNjQsImp0aSI6ImY3NzlkOWM5LTM5NjEtNDQ3Ni05ZWU2LWM5M2QzMWMyMjkwMiIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.CoP-ZVZnnb4utizXlJgkHUGWm9T-LlBgtV5rVp2WzBWN2oA77Db3MPboj6RXozfkd-jPxzVQL1zJsFuAhsBySWHmfsIKcsHCIRJjulc2fFZ-M6LQx6kL5vj-JrF8rKtqc98_oEJl4TSz0NGf4ype64cCAy5dPyeigIRtK2l09GKQCWoVxa44Tdbr2D2KKdIdCT2W6mEEFjxwQK8u4OOe1-DKolSxl26t-9iBLMdochFDPcjA9l4ew6D5NoM64oeZN6OivUYZvEm8XXGNn3-rSqYCZ226HMsfQ9xpih5GSfF39a0jqYIxUSmGPDlA76OCaq-j-A1p37PWfTaJDiypIg",
+    "ExpiresIn": 86400,
+    "IdToken": "eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiI1Mzg1ZDZhYi0wZWUyLTRlZjUtOWFmNi1lNmRlMTI3NjUwMTIiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiJiYWQyNjJjNS1jZjg3LTQ0ZTYtOTVkNy1kMTY1YmFkZTZkZGEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3NDA2NCwiZXhwIjoxNjg2NTYwNDY0LCJpYXQiOjE2ODY0NzQwNjQsImp0aSI6IjEwYzhlZDFkLTg0YmQtNGM1MS05NTFmLTFlYjBkZDE5OGE4OSIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.ZZzEgU-RSWt09UJ04P79z7Ss5fmn5sioq-oSaJ7pMf8Ezb-fZ3Jksz0nGKtH6tycWA1Vek2DEbLO78ggO-yI9vvLMZIW0bzUMDWSOxNweELrhBqPOEgRwVx-ilKkdwEcMW2Y6VHUYLtmGHMGMUfk0Ag7ZeoCNpYZaP03kWwiF30OYv3o7Hmuhm0GU8xhvQ3XDsPwdao73dpzPSLIelqQ87z0vCgqqxLRB7WVRJQsi2IUx5oaCEGwibvyt3qDzjQHGHwC8L5zyweik6JLbZGb_wym078XHn_dqNoaz0YFHwX8x6ZJel8QhsXT3sUy9faQdbInqHA6qDIsGJWwhUpVyQ",
+    "RefreshToken": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.fKyMxSYvFX4ySltwGI3HeRBkuAdirT5U2vyvOLIJE5WzsA0DtIU-25sw-f6PWai5Npr6UHOuHqvS5tuGtWFjUS6UyYwoWsU3sr0soyVOfQDks9k5lN31tfD5x_OETWD8TY3gZIMGiLHEASRCpy5hKe6L8TVDKWVXCC3nW4XzKu0yF3aPPwH1vNfSvC4sGLMY3LBXgp16RLDxlEl6ZqKCYbxsMoZt4D9ruGsdXjWFlR1i4X_GekX3XCHKhhzxHVuPcZrf1g7Iv8lG-jNzKjfSVL4dB_0bn4XfAHhQ7hmObbdEy-SeGhfVFZu5mqGUgAgNXDfLRUeMYGdWEN-ia-vMFg.uxvgYqMPnrQdYrjT.qSvJd4R-uukJ0qJBx9_mTNsYne_zGeDLJ-fJod6mCVx9N-N4iSL1uXdmCLMiJk-ICSUVXOPcy5TkG-mDEvLjGgMhZjoxb4v5PLKivkhYlFkhLCJn0lu31OFNb5LOrJqwAhbmEZx5FYhWjbANts7dlhfFGIhxtpICLyQ4l-_YqanahYLCh_UBkbWsdpLoHYnrYVw9GjMpR7zoilpkiJA2i91xhYYDJIbNaATBbVGUeWdWj7mKjFfUSaniy7XJLnvnCs74luenlBCsz4mEfDPWYv5U_tRvsczavMRyy_mFQukyKZFbdUK_iVZGpOnZkRh0b-ywnuiQbOMAOV22f2xWKxTkq72a_WxsH_tBkNw9QZZTlWj6TUGlPzv--zQoSyvhKvFgrTJBmU5LcDnu1cnXw4Iz_infD7mY2-C-e3fIlT7RdQLvyirL71y7LlTVN0wPd_9KBor0E72S-cHu9EqvJdQJt3nuEI2tTCGdvimSRkIqgt1wwYKtzQezfc1qGBg1o1cDyj-nuy3I-6nQ5N8o49ovcIsuRjyiaFfmB4a6h-3CkR15zvOTFUTqngAI9q7J3YcaBBpdl9j3LqQchDDAkYWi3SIroat2uwxKxkA7pM0bB-OUN04bCjUBBTuGUdaMtNdrYOYnlRRFz-0c46Yl0Mq89eaLIJstDcFkJ2_KFblM2qjYIJmL7rJDH6CYYVpLtSn8wR0UvgVBCEe8qDeZH3FzGyoyu1e2Va5dWd77-7AL6XhiBi3e240b1sKKDCk6XmAWG-owtKJOiyK95QejvJffv84gAv7MpLR3MSepV-9YNDgJ1AOXiLoCP0U9jOo2S9xbGQWCwZo-YoY1UFYs6TuBVSwL-oOP9fOxGXvEnuNPCrpCZi6O8C5UUvhwPQy6kBoahRow_zbAAdUDu1sLV98Xc8UX1F414IImQzc--N2O8Dp6jCDlNa9JoO6IJI-iTI-i7BZu7a7YJ2sPAG3Vy4VHo-tYWIm_jm9QAW-RCzItrccgHEMeX2qiaCwQP_aA2UKdFnmv_cgsS_QwM2sdupNpZclFu0qOOsi6_AWP6dT4l1x_57IcyU7ewzh-ufC5WPH4VolorpAvHjsQmtqTGos_T8rHfDkZap6PYUH7qVyxLzkuS1BOUbK599NZVJrFmokUC8E1Jn4HBrxegzOVfeLdDs8rZTyEfVpkg9Unrnb1nM6UFyn7qHNROWlWdl0hA5-s07yF4XUzy9KsbUR58jNh0YI6YrVV9xdQPfavmyC_N1RACiCYVSos3Kvp-CwRk6LlBRMMyeaHz28.kc5YgPyaNljTfHNqV2_gtw",
+    "TokenType": "Bearer"
+  },
+  "ChallengeParameters": {
+  }
+}
+ 
+14:31:05.027 [main] INFO  com.intuit.karate - [print] eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjUzODVkNmFiLTBlZTItNGVmNS05YWY2LWU2ZGUxMjc2NTAxMiIsImV2ZW50X2lkIjoiYmFkMjYyYzUtY2Y4Ny00NGU2LTk1ZDctZDE2NWJhZGU2ZGRhIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3NDA2NCwiZXhwIjoxNjg2NTYwNDY0LCJpYXQiOjE2ODY0NzQwNjQsImp0aSI6ImY3NzlkOWM5LTM5NjEtNDQ3Ni05ZWU2LWM5M2QzMWMyMjkwMiIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.CoP-ZVZnnb4utizXlJgkHUGWm9T-LlBgtV5rVp2WzBWN2oA77Db3MPboj6RXozfkd-jPxzVQL1zJsFuAhsBySWHmfsIKcsHCIRJjulc2fFZ-M6LQx6kL5vj-JrF8rKtqc98_oEJl4TSz0NGf4ype64cCAy5dPyeigIRtK2l09GKQCWoVxa44Tdbr2D2KKdIdCT2W6mEEFjxwQK8u4OOe1-DKolSxl26t-9iBLMdochFDPcjA9l4ew6D5NoM64oeZN6OivUYZvEm8XXGNn3-rSqYCZ226HMsfQ9xpih5GSfF39a0jqYIxUSmGPDlA76OCaq-j-A1p37PWfTaJDiypIg 
+14:31:05.664 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) Platform/src/test/java/Washmetrix/Features/login.feature
+14:40:00.370 [main] INFO  com.intuit.karate - Karate version: 1.4.0
+14:40:00.882 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:40:00.893 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1686474600883
+14:40:00.934 [main] INFO  c.intuit.karate.core.FeatureRuntime - found scenario at line: 6
+14:40:02.092 [main] INFO  com.intuit.karate - karate.env system property was: null 
+14:40:02.140 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:7
+* def authToken = call read(login.feature).accessToken
+js failed:
+>>>>
+01: read(login.feature)
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "login" is not defined
+- <js>.:program(Unnamed:1)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:7
+14:40:02.876 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) Platform/src/test/java/Washmetrix/Features/individualWash.feature
+14:49:08.602 [main] INFO  com.intuit.karate - Karate version: 1.4.0
+14:49:09.055 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:49:09.060 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1686475149056
+14:49:10.272 [main] INFO  com.intuit.karate - karate.env system property was: null 
+14:49:10.668 [main] DEBUG com.intuit.karate - request:
+1 > POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 51
+1 > Host: fdn-svc-qa.washmetrix.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"username":"test_qa_user","password":"Qwerty123#"}
+
+14:49:13.671 [main] DEBUG com.intuit.karate - response time in milliseconds: 3000
+1 < 200
+1 < Date: Sun, 11 Jun 2023 09:19:13 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 3980
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < x-response-time: 0.33429884910583496
+{"AuthenticationResult":{"AccessToken":"eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6ImI1NjVlZDIxLTg0NmYtNGQzMS04YmQ4LWFiOTk2ZmU0YzQ5MCIsImV2ZW50X2lkIjoiOTVlMDE0NDQtYmM1NS00Yjg5LThhYjktYzcxMzUxNzc0NTZmIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3NTE1MywiZXhwIjoxNjg2NTYxNTUzLCJpYXQiOjE2ODY0NzUxNTMsImp0aSI6IjQzNjZjNTRlLWJmZjQtNDI0Ni05YTM4LTVmMTI3ZDk2NmIzNCIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.ABzOB-KdVcBduUj9ecWm0fKOlr9B876_P-LJu86h_1-zNoquZz6b2dXVZP2w1Hn4opQqOZrltY_0s_z_OI0IbKtNjzmNNcN-xAMQBUUb7MYu_m9H3APKcmzeWZXVppZ9Gfz-3Rpu1uN8JqNLTnBA4-MWkosZ2o1MY_l70qJ_YWr9Uon4OYEZixqZdktCPm97zE7e4uYcK2RiTz-kcAWI8eDyx5ggMOy9zlkOWzmld_aO3U3ECgu7hTnnJ918hw4irrB1UrnLNS-72L6PkJHZDBCzSj8Ix-zj_HR9eARb1w5k9s11m_YYc7MryJpPwVTW3qhRRRUuETVj3u7AtbkqGw","ExpiresIn":86400,"IdToken":"eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiJiNTY1ZWQyMS04NDZmLTRkMzEtOGJkOC1hYjk5NmZlNGM0OTAiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiI5NWUwMTQ0NC1iYzU1LTRiODktOGFiOS1jNzEzNTE3NzQ1NmYiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3NTE1MywiZXhwIjoxNjg2NTYxNTUzLCJpYXQiOjE2ODY0NzUxNTMsImp0aSI6IjJkZjBkYmI5LTk3MDctNDZhMi1hODEwLWU5NDBjMDliNTNkOSIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.LyzugbVTTLIUGjTq8inrzqjGl_aL4y4MZ3N3dvUx9E9u98U4RTvv_4VaMS110OSv6IId6VsMP7K7NVXCsa1N_McESmJwuRZtgE4uFuWhhG03AY3p4O7WDNkrzD8hle3G-Mzoa4iajt--8dxkHRHmW_YF7xcb-yy8wgFMm8Uz6t5QI6OO7Yywxx_pDhv1ymONgOqqDaV7yX5OdpTMyfSkjay3jJSDpUup1gofh-LgYmllEMiNMcHLkily_pLTGIrWuFbxmMgHdSkr1onzOrOLehs91DXMMBNXq1Dz1_svmQBsI9Bj8g9kul3aLPZOWwHhK5vQccxeLY4RZvnW_O2Gxg","RefreshToken":"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.kJEiNYJ3CaMHqqPHvsFurlHWjxyB8tm82cNz4aWOGjwBHsb6KGru-ycbXvvx0NFJkdURqmUlLTlp_za8rd1iK_m_38MB84TDOXj5c0RbfEpuyxPWB7DTfRZuGHwuIEJj_q_aKfwuRCJRZWIIWAa2a3ok3fBAiRcEKLULzDWdYK2jNJrqP57o7p4jCLZNNER5i9lECuzwQzNt5e6MFtZZ3bCwPyf2SI47xMutv1rXzb6AGQ4FSOrfd4dmnLebDn642-5FX3aSz3nAmgSChbs2z5a3b4Hlo0hUMHyJyLP7LoI39rhbeOwBWs_UjszW74xP5HVdJCNvPnn4ebgLqU7Zzg.HWh6FS-2OyTxoCpm.3lteNiry6YuAJmECzGHidx4dSQTWnov0hrrZ7TqUfVbDb2_MA6OS84Bmdo9KrYHc2CeFMYF46Dw4H7u4HoGaXG7QdBwhAH0FId-Gb6qWseIJ53BBoSWAQA79tcsjKODIFWdwiSrLvBSjmhdUtMXshqRXVYJmXvG-iVTcCml7rPhATymBfkLUs8jE5XVoke11w0YUlATGrp_6RCxe1lrZNPtLMY7lxWUROBiGtbcFZX1EOBVHod2dwaw8ZvyTms4vMTad1aIXUZVuw9Oi17B_wWqPC8JEdbaxdSJ5bYqWpPYBh8e2us5chyzZjyRUX7QZhRHbRo9R70pAp8H6keQuLr78lZ7hM0g4jRqEwxggQNXKpV_h20yYQ9Llj-TyZq88ioJxheVNxe9xC00M_cnJNDBM6S531xHLCgQQzwmT9OUph9iOfwzI-o1Zs8BJ9I76zBSZaJ_sY8zFrH8Mu2ifoDzXUJ66LNLsYebClDrXo-9PpABEKZNxL095RjdhkuHb9bV1fYK6QTVEX-gZ9M3IOfY7Q21p_OjCfc2eCcsBtQOK9SCQuOaHZ7RbkxoFMt50Z0WhTe1g1Bp8n2XWDmFhTeZNRE3c5J-PyBZxgiVxjKlGXa0v37vjdnUby-n1CRjkIfoAxe9iYceOewQvyXP5StDaBSo7mv9C-3moCkTqxxs59vwsbBD6MbwOb1aaKK758D3kFOupoDEaC0JII_M5wjTue2lOW6DitARoBvGAJneLEsERNj9NQEAIvOeJ0IcTKiEMLfSDBI_xnFrTdibYvesT34LxWYZrX3y-U-CK6Q4Q66ldDha8E8TYDQtzRclKrAZ7XJfnp2fnTrWEIYNZX7r97YgWEDguvOU7r6ZjNgKlLd_2gfqcqU2cTV8qpw8FVCWFSfVFqIpyHzLcGMZeMsmdAs3N0SJKYsMKN1AI-mdTQhTzDNxrCC7zv4oUuEJ3fzuohm_uRlzy1kM8fNurfpuG-XWVamhQT2xPCPdH3jsgkfux1sBNa4_KobkDTfTNSsq4cT6tdJoQqFyQaUBkUbtBbxMIrFSh4igbEI9UXRWBv260oGEHFR-xShmqWoQp9MmVzafRg3kNABqhTYK9DI182Mr9SDUNe-tNR8EWnWON7zlKhM06i1GZa_e0Sz0J4IFve7x6UCt4ruq9LUUMHNQlTeXHtRR0y3g-duFfuE3OorIFq8_OhcB9UTOHC0vQFRPPfT2VOhHtRGgkQjkvSMa5tuWdth1TqcRRh9u952sqGalhGNT3_vA2YEmPNEL2LgSi7viMhufu-n4.iD0LoanEyvIDmhyWRINdIA","TokenType":"Bearer"},"ChallengeParameters":{}}
+
+14:49:13.678 [main] INFO  com.intuit.karate - [print] {
+  "AuthenticationResult": {
+    "AccessToken": "eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6ImI1NjVlZDIxLTg0NmYtNGQzMS04YmQ4LWFiOTk2ZmU0YzQ5MCIsImV2ZW50X2lkIjoiOTVlMDE0NDQtYmM1NS00Yjg5LThhYjktYzcxMzUxNzc0NTZmIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3NTE1MywiZXhwIjoxNjg2NTYxNTUzLCJpYXQiOjE2ODY0NzUxNTMsImp0aSI6IjQzNjZjNTRlLWJmZjQtNDI0Ni05YTM4LTVmMTI3ZDk2NmIzNCIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.ABzOB-KdVcBduUj9ecWm0fKOlr9B876_P-LJu86h_1-zNoquZz6b2dXVZP2w1Hn4opQqOZrltY_0s_z_OI0IbKtNjzmNNcN-xAMQBUUb7MYu_m9H3APKcmzeWZXVppZ9Gfz-3Rpu1uN8JqNLTnBA4-MWkosZ2o1MY_l70qJ_YWr9Uon4OYEZixqZdktCPm97zE7e4uYcK2RiTz-kcAWI8eDyx5ggMOy9zlkOWzmld_aO3U3ECgu7hTnnJ918hw4irrB1UrnLNS-72L6PkJHZDBCzSj8Ix-zj_HR9eARb1w5k9s11m_YYc7MryJpPwVTW3qhRRRUuETVj3u7AtbkqGw",
+    "ExpiresIn": 86400,
+    "IdToken": "eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiJiNTY1ZWQyMS04NDZmLTRkMzEtOGJkOC1hYjk5NmZlNGM0OTAiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiI5NWUwMTQ0NC1iYzU1LTRiODktOGFiOS1jNzEzNTE3NzQ1NmYiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ3NTE1MywiZXhwIjoxNjg2NTYxNTUzLCJpYXQiOjE2ODY0NzUxNTMsImp0aSI6IjJkZjBkYmI5LTk3MDctNDZhMi1hODEwLWU5NDBjMDliNTNkOSIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.LyzugbVTTLIUGjTq8inrzqjGl_aL4y4MZ3N3dvUx9E9u98U4RTvv_4VaMS110OSv6IId6VsMP7K7NVXCsa1N_McESmJwuRZtgE4uFuWhhG03AY3p4O7WDNkrzD8hle3G-Mzoa4iajt--8dxkHRHmW_YF7xcb-yy8wgFMm8Uz6t5QI6OO7Yywxx_pDhv1ymONgOqqDaV7yX5OdpTMyfSkjay3jJSDpUup1gofh-LgYmllEMiNMcHLkily_pLTGIrWuFbxmMgHdSkr1onzOrOLehs91DXMMBNXq1Dz1_svmQBsI9Bj8g9kul3aLPZOWwHhK5vQccxeLY4RZvnW_O2Gxg",
+    "RefreshToken": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.kJEiNYJ3CaMHqqPHvsFurlHWjxyB8tm82cNz4aWOGjwBHsb6KGru-ycbXvvx0NFJkdURqmUlLTlp_za8rd1iK_m_38MB84TDOXj5c0RbfEpuyxPWB7DTfRZuGHwuIEJj_q_aKfwuRCJRZWIIWAa2a3ok3fBAiRcEKLULzDWdYK2jNJrqP57o7p4jCLZNNER5i9lECuzwQzNt5e6MFtZZ3bCwPyf2SI47xMutv1rXzb6AGQ4FSOrfd4dmnLebDn642-5FX3aSz3nAmgSChbs2z5a3b4Hlo0hUMHyJyLP7LoI39rhbeOwBWs_UjszW74xP5HVdJCNvPnn4ebgLqU7Zzg.HWh6FS-2OyTxoCpm.3lteNiry6YuAJmECzGHidx4dSQTWnov0hrrZ7TqUfVbDb2_MA6OS84Bmdo9KrYHc2CeFMYF46Dw4H7u4HoGaXG7QdBwhAH0FId-Gb6qWseIJ53BBoSWAQA79tcsjKODIFWdwiSrLvBSjmhdUtMXshqRXVYJmXvG-iVTcCml7rPhATymBfkLUs8jE5XVoke11w0YUlATGrp_6RCxe1lrZNPtLMY7lxWUROBiGtbcFZX1EOBVHod2dwaw8ZvyTms4vMTad1aIXUZVuw9Oi17B_wWqPC8JEdbaxdSJ5bYqWpPYBh8e2us5chyzZjyRUX7QZhRHbRo9R70pAp8H6keQuLr78lZ7hM0g4jRqEwxggQNXKpV_h20yYQ9Llj-TyZq88ioJxheVNxe9xC00M_cnJNDBM6S531xHLCgQQzwmT9OUph9iOfwzI-o1Zs8BJ9I76zBSZaJ_sY8zFrH8Mu2ifoDzXUJ66LNLsYebClDrXo-9PpABEKZNxL095RjdhkuHb9bV1fYK6QTVEX-gZ9M3IOfY7Q21p_OjCfc2eCcsBtQOK9SCQuOaHZ7RbkxoFMt50Z0WhTe1g1Bp8n2XWDmFhTeZNRE3c5J-PyBZxgiVxjKlGXa0v37vjdnUby-n1CRjkIfoAxe9iYceOewQvyXP5StDaBSo7mv9C-3moCkTqxxs59vwsbBD6MbwOb1aaKK758D3kFOupoDEaC0JII_M5wjTue2lOW6DitARoBvGAJneLEsERNj9NQEAIvOeJ0IcTKiEMLfSDBI_xnFrTdibYvesT34LxWYZrX3y-U-CK6Q4Q66ldDha8E8TYDQtzRclKrAZ7XJfnp2fnTrWEIYNZX7r97YgWEDguvOU7r6ZjNgKlLd_2gfqcqU2cTV8qpw8FVCWFSfVFqIpyHzLcGMZeMsmdAs3N0SJKYsMKN1AI-mdTQhTzDNxrCC7zv4oUuEJ3fzuohm_uRlzy1kM8fNurfpuG-XWVamhQT2xPCPdH3jsgkfux1sBNa4_KobkDTfTNSsq4cT6tdJoQqFyQaUBkUbtBbxMIrFSh4igbEI9UXRWBv260oGEHFR-xShmqWoQp9MmVzafRg3kNABqhTYK9DI182Mr9SDUNe-tNR8EWnWON7zlKhM06i1GZa_e0Sz0J4IFve7x6UCt4ruq9LUUMHNQlTeXHtRR0y3g-duFfuE3OorIFq8_OhcB9UTOHC0vQFRPPfT2VOhHtRGgkQjkvSMa5tuWdth1TqcRRh9u952sqGalhGNT3_vA2YEmPNEL2LgSi7viMhufu-n4.iD0LoanEyvIDmhyWRINdIA",
+    "TokenType": "Bearer"
+  },
+  "ChallengeParameters": {
+  }
+}
+ 
+14:49:13.683 [main] INFO  com.intuit.karate - [print] eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6ImI1NjVlZDIxLTg0NmYtNGQzMS04YmQ4LWFiOTk2ZmU0YzQ5MCIsImV2ZW50X2lkIjoiOTVlMDE0NDQtYmM1NS00Yjg5LThhYjktYzcxMzUxNzc0NTZmIiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ3NTE1MywiZXhwIjoxNjg2NTYxNTUzLCJpYXQiOjE2ODY0NzUxNTMsImp0aSI6IjQzNjZjNTRlLWJmZjQtNDI0Ni05YTM4LTVmMTI3ZDk2NmIzNCIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.ABzOB-KdVcBduUj9ecWm0fKOlr9B876_P-LJu86h_1-zNoquZz6b2dXVZP2w1Hn4opQqOZrltY_0s_z_OI0IbKtNjzmNNcN-xAMQBUUb7MYu_m9H3APKcmzeWZXVppZ9Gfz-3Rpu1uN8JqNLTnBA4-MWkosZ2o1MY_l70qJ_YWr9Uon4OYEZixqZdktCPm97zE7e4uYcK2RiTz-kcAWI8eDyx5ggMOy9zlkOWzmld_aO3U3ECgu7hTnnJ918hw4irrB1UrnLNS-72L6PkJHZDBCzSj8Ix-zj_HR9eARb1w5k9s11m_YYc7MryJpPwVTW3qhRRRUuETVj3u7AtbkqGw 
+14:49:14.337 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) Platform/src/test/java/Washmetrix/Features/login.feature
+16:30:01.393 [main] INFO  com.intuit.karate - Karate version: 1.4.0
+16:30:01.871 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:30:01.878 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1686481201872
+16:30:03.048 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:30:03.055 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:Washmetrix/Features/login.feature
+16:30:03.433 [main] DEBUG com.intuit.karate - request:
+1 > POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 51
+1 > Host: fdn-svc-qa.washmetrix.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"username":"test_qa_user","password":"Qwerty123#"}
+
+16:30:05.467 [main] DEBUG com.intuit.karate - response time in milliseconds: 2029
+1 < 200
+1 < Date: Sun, 11 Jun 2023 11:00:05 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 3980
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < x-response-time: 0.41445493698120117
+{"AuthenticationResult":{"AccessToken":"eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjRmMGFlMTc1LWM5OGQtNGMzOS1iM2U5LTA1OGZiY2Q1OWYxZCIsImV2ZW50X2lkIjoiNTU1ODliOWMtNmVlZi00NzkzLWI1MzQtYjNiZGM0NDM1N2I1IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ4MTIwNSwiZXhwIjoxNjg2NTY3NjA1LCJpYXQiOjE2ODY0ODEyMDUsImp0aSI6IjcwOWUxYmRkLTNmNmQtNDY1Zi05Y2QzLTNmOGJkZjIzNzQwNSIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.DcyiFlr74BKsdcAz0ZLDCWpy473k1ynNDKsij0mdt6d9sSAcDJJkEWB8V4UsAcfuj4aGofBkyBkQdeORSWlZHq7vPZYPP7RqmVy20axJnVwp0bcwSWE1xANRQO9C-Yt6l_flfan_qDQa5Lul0RqHt-b43u5d7h_nH0z7D6kwP4ce6OBpWCknC8Kify_57oI_hoOqpV5032CnJRrK0vGxRvCtBpQwY3X2YGJbiJ0nU84HOoQO7kRvi2E_PpiTw-jrfaoil9J64YVRuAYtMIJxVsTXZiECfBtym_ZQMaMd0wOHfcECnGM48uLU80CvpmA5dr4dbwF4KurB_jTa4JQ4XQ","ExpiresIn":86400,"IdToken":"eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiI0ZjBhZTE3NS1jOThkLTRjMzktYjNlOS0wNThmYmNkNTlmMWQiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiI1NTU4OWI5Yy02ZWVmLTQ3OTMtYjUzNC1iM2JkYzQ0MzU3YjUiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ4MTIwNSwiZXhwIjoxNjg2NTY3NjA1LCJpYXQiOjE2ODY0ODEyMDUsImp0aSI6IjA4NDQ4ZGJhLTk2MTgtNGIyYy1iY2M5LTBjOWZlY2MzM2YxMCIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.pcKKSf1503-kdePk5iift0egNIwxkYOR6cyOla03qlOndMo9tyrsm_2tDUMnV8cMyUiy9z42CcqVP_TrB36OUoINWyeOAPxTiPiF8-1dom-9WntjRnLUPW01Loggbk_8Z3okcmvOYffIx2_OL3vuUA0LTBKVCt1wpS6eNDy6GhbmbY5N9LQMF_pWv9MpKdtBR_YfvAMHnlubypBN_MXDrJTFx_bKekhmAOZYn6Dvg1oU4ULu6kOMiYFNY8aaQ8P5ywZlsFmHOerWgODU805m98orGqTbEE_gPGVLe59zOFns-QhPMEucypk2jzWpBsciULsS-eTlpPwwN_m4u8Yq1A","RefreshToken":"eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.Vsp1P3UqMjHcO5q96T7H5eJ5fqUS4-rY8K_7tHdV3eXVZKjZLh47DXvySAl_HFNKLtbPwAc9IEKIkev-lwnI4F0tZAjaNqXmAcwKxF6ZjOi6GilkMyvbe6TIZ7eQO_UOrT976RuUhEOc-GicxOqtM9HCvlcvFRgsMbMc41q5PoUvSXHnnyQA77y1zA5bHGSMpP6ld1M6EGR--3ZVXC0e7ojwEKX6R5lJU7ds3rj7pD4uLms5CEBeB2Iz6kGJgIQIb5PiYfuT272ysy4po8PukN--OYnDdz2xzKryHe_BWoeRZMA7j7f1na83Sq4XSWKzM86UBrK-xD80ZvWwR1fobg.pTfyoXcNvORkivDX.rOhdbxowdxifjhGbCCfVwLLn5KE1NWnzkgZrz7EK-1ZK4Q41sHZxzvFY8S4GnJ4qZrDBsv_a7V99qwfdrP6fvYcAuIED-8JYjOk-DBAWAFuiQJxwzKEiSm2BlHdnmdJ-uVgc71wLAhf-fmx0XQ95YTMWjGqTR0Z8NqYOskG7zke_gG_WloGZnzZlThI1qkCcNkQdcQvHAA3VsNrly70tT9eO_T49gfH8HhAWM8-ED6dR5IwwkD_x-9R3I51XZ_eBQy0FBX6m3HazZbdD5es2u8k5jFfIpvJozEOD25YteEd47XVJeW4VyO3CNv08jkBlRHhCG_2DAcKmiwTJDMhrpIqCHIGKiwvznbAZhZ8S_wjqsCEdsFzlkX2tfX_INrEhM4ODObFj4M4mXheAk1EQm2afRDYQuVMnPzzYTYkhRXgErHaFWI0BHB4MvtY5MMH8xoFqghfl420g0kNHTU7gye3grVLo5muGHU5meNuPVHCOCeEiRXU-86qddie-hDSUvanlzk7i632U9R9fhm5v0TzPMbBoUV0Mpp2pg124OGTUbdQ6sRMO1U4TYAmWNGdgDwVu3TM7OqOq3LcXdNIkBgk51-z93YvXXLM_vIWapbhvIQwyzIfFk3eK4hWRggdsCSY5SGCdqvVI5epEWFpo5KnQF_hy05W72fl1D4dq91sUwAbMcE1nsC7KuNyLjM9PPAEDNtmqOemwQ4w-6xT6-sP_CwaiLhg5RaWveQ9qqX9UOZHn4uZ5l_w5xGGfS1qiNBC_aTHIQPHzRu65fY9otMbaWjgY6KVaKYhfrnYUzUYGar6o3_myxM7W2B3pXO3HQ7xkeeWEjH_bEuUpkDTmmCETIyEaPoBy-ev00aPc7ZYDkHNzR3Ly-jTTZkxpBROAjM9fgWmTHm-kpL-uLA0vPavLZcxUK-mDqTk7ul6dNmhdUhIidHAKOOtqQ1nwgCOjyK-02nJvujDfeYDCzJCswhgF7SCRdtgNqtGndtasESYgpVhsusTxzrpOtHZnrS4zMwWiZAwvh0J6pYYYFbtXeHhsv-3FhzHpCHydilTFihirKLW_d_l9WADKpEZKRIVD1kYm2K3MgxnTplPIodz4PgiRnzVfdzOgiwP7X3nGRB-G_OdmKuJAl-MftrqInGfUa-_26qWku7DEGk4QgzIJFkF1xOD-BUtIbqzZgrjqZwR8zE_tkruoVCK2Wfc61QdkJKn2ZtIYT4rlowipYvd7VFM51dJudNhH_YFJZj5koH7uanrxT6RMsjCyHkDbRXynEpWXFORs5gd5y_E.Hl-l_hwPHEbCT5_-AxW3lw","TokenType":"Bearer"},"ChallengeParameters":{}}
+
+16:30:05.477 [main] INFO  com.intuit.karate - [print] {
+  "AuthenticationResult": {
+    "AccessToken": "eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjRmMGFlMTc1LWM5OGQtNGMzOS1iM2U5LTA1OGZiY2Q1OWYxZCIsImV2ZW50X2lkIjoiNTU1ODliOWMtNmVlZi00NzkzLWI1MzQtYjNiZGM0NDM1N2I1IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ4MTIwNSwiZXhwIjoxNjg2NTY3NjA1LCJpYXQiOjE2ODY0ODEyMDUsImp0aSI6IjcwOWUxYmRkLTNmNmQtNDY1Zi05Y2QzLTNmOGJkZjIzNzQwNSIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.DcyiFlr74BKsdcAz0ZLDCWpy473k1ynNDKsij0mdt6d9sSAcDJJkEWB8V4UsAcfuj4aGofBkyBkQdeORSWlZHq7vPZYPP7RqmVy20axJnVwp0bcwSWE1xANRQO9C-Yt6l_flfan_qDQa5Lul0RqHt-b43u5d7h_nH0z7D6kwP4ce6OBpWCknC8Kify_57oI_hoOqpV5032CnJRrK0vGxRvCtBpQwY3X2YGJbiJ0nU84HOoQO7kRvi2E_PpiTw-jrfaoil9J64YVRuAYtMIJxVsTXZiECfBtym_ZQMaMd0wOHfcECnGM48uLU80CvpmA5dr4dbwF4KurB_jTa4JQ4XQ",
+    "ExpiresIn": 86400,
+    "IdToken": "eyJraWQiOiJSRlZNU1VnZnZNVStzSlYwOWdJQ2lcL0RLOGthWmkwbGZmZFpadE9GNklQaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfelYyT3dmZFdEIiwiY29nbml0bzp1c2VybmFtZSI6InRlc3RfcWFfdXNlciIsIm9yaWdpbl9qdGkiOiI0ZjBhZTE3NS1jOThkLTRjMzktYjNlOS0wNThmYmNkNTlmMWQiLCJhdWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwiZXZlbnRfaWQiOiI1NTU4OWI5Yy02ZWVmLTQ3OTMtYjUzNC1iM2JkYzQ0MzU3YjUiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTY4NjQ4MTIwNSwiZXhwIjoxNjg2NTY3NjA1LCJpYXQiOjE2ODY0ODEyMDUsImp0aSI6IjA4NDQ4ZGJhLTk2MTgtNGIyYy1iY2M5LTBjOWZlY2MzM2YxMCIsImVtYWlsIjoiYXJqdW4uZ2FuZXNoQHplbW9zb2xhYnMuY29tIn0.pcKKSf1503-kdePk5iift0egNIwxkYOR6cyOla03qlOndMo9tyrsm_2tDUMnV8cMyUiy9z42CcqVP_TrB36OUoINWyeOAPxTiPiF8-1dom-9WntjRnLUPW01Loggbk_8Z3okcmvOYffIx2_OL3vuUA0LTBKVCt1wpS6eNDy6GhbmbY5N9LQMF_pWv9MpKdtBR_YfvAMHnlubypBN_MXDrJTFx_bKekhmAOZYn6Dvg1oU4ULu6kOMiYFNY8aaQ8P5ywZlsFmHOerWgODU805m98orGqTbEE_gPGVLe59zOFns-QhPMEucypk2jzWpBsciULsS-eTlpPwwN_m4u8Yq1A",
+    "RefreshToken": "eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.Vsp1P3UqMjHcO5q96T7H5eJ5fqUS4-rY8K_7tHdV3eXVZKjZLh47DXvySAl_HFNKLtbPwAc9IEKIkev-lwnI4F0tZAjaNqXmAcwKxF6ZjOi6GilkMyvbe6TIZ7eQO_UOrT976RuUhEOc-GicxOqtM9HCvlcvFRgsMbMc41q5PoUvSXHnnyQA77y1zA5bHGSMpP6ld1M6EGR--3ZVXC0e7ojwEKX6R5lJU7ds3rj7pD4uLms5CEBeB2Iz6kGJgIQIb5PiYfuT272ysy4po8PukN--OYnDdz2xzKryHe_BWoeRZMA7j7f1na83Sq4XSWKzM86UBrK-xD80ZvWwR1fobg.pTfyoXcNvORkivDX.rOhdbxowdxifjhGbCCfVwLLn5KE1NWnzkgZrz7EK-1ZK4Q41sHZxzvFY8S4GnJ4qZrDBsv_a7V99qwfdrP6fvYcAuIED-8JYjOk-DBAWAFuiQJxwzKEiSm2BlHdnmdJ-uVgc71wLAhf-fmx0XQ95YTMWjGqTR0Z8NqYOskG7zke_gG_WloGZnzZlThI1qkCcNkQdcQvHAA3VsNrly70tT9eO_T49gfH8HhAWM8-ED6dR5IwwkD_x-9R3I51XZ_eBQy0FBX6m3HazZbdD5es2u8k5jFfIpvJozEOD25YteEd47XVJeW4VyO3CNv08jkBlRHhCG_2DAcKmiwTJDMhrpIqCHIGKiwvznbAZhZ8S_wjqsCEdsFzlkX2tfX_INrEhM4ODObFj4M4mXheAk1EQm2afRDYQuVMnPzzYTYkhRXgErHaFWI0BHB4MvtY5MMH8xoFqghfl420g0kNHTU7gye3grVLo5muGHU5meNuPVHCOCeEiRXU-86qddie-hDSUvanlzk7i632U9R9fhm5v0TzPMbBoUV0Mpp2pg124OGTUbdQ6sRMO1U4TYAmWNGdgDwVu3TM7OqOq3LcXdNIkBgk51-z93YvXXLM_vIWapbhvIQwyzIfFk3eK4hWRggdsCSY5SGCdqvVI5epEWFpo5KnQF_hy05W72fl1D4dq91sUwAbMcE1nsC7KuNyLjM9PPAEDNtmqOemwQ4w-6xT6-sP_CwaiLhg5RaWveQ9qqX9UOZHn4uZ5l_w5xGGfS1qiNBC_aTHIQPHzRu65fY9otMbaWjgY6KVaKYhfrnYUzUYGar6o3_myxM7W2B3pXO3HQ7xkeeWEjH_bEuUpkDTmmCETIyEaPoBy-ev00aPc7ZYDkHNzR3Ly-jTTZkxpBROAjM9fgWmTHm-kpL-uLA0vPavLZcxUK-mDqTk7ul6dNmhdUhIidHAKOOtqQ1nwgCOjyK-02nJvujDfeYDCzJCswhgF7SCRdtgNqtGndtasESYgpVhsusTxzrpOtHZnrS4zMwWiZAwvh0J6pYYYFbtXeHhsv-3FhzHpCHydilTFihirKLW_d_l9WADKpEZKRIVD1kYm2K3MgxnTplPIodz4PgiRnzVfdzOgiwP7X3nGRB-G_OdmKuJAl-MftrqInGfUa-_26qWku7DEGk4QgzIJFkF1xOD-BUtIbqzZgrjqZwR8zE_tkruoVCK2Wfc61QdkJKn2ZtIYT4rlowipYvd7VFM51dJudNhH_YFJZj5koH7uanrxT6RMsjCyHkDbRXynEpWXFORs5gd5y_E.Hl-l_hwPHEbCT5_-AxW3lw",
+    "TokenType": "Bearer"
+  },
+  "ChallengeParameters": {
+  }
+}
+ 
+16:30:05.480 [main] DEBUG c.intuit.karate.core.ScenarioEngine - over-writing existing variable 'accessToken' with new value: response.AuthenticationResult.AccessToken
+16:30:05.481 [main] INFO  com.intuit.karate - [print] eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjRmMGFlMTc1LWM5OGQtNGMzOS1iM2U5LTA1OGZiY2Q1OWYxZCIsImV2ZW50X2lkIjoiNTU1ODliOWMtNmVlZi00NzkzLWI1MzQtYjNiZGM0NDM1N2I1IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ4MTIwNSwiZXhwIjoxNjg2NTY3NjA1LCJpYXQiOjE2ODY0ODEyMDUsImp0aSI6IjcwOWUxYmRkLTNmNmQtNDY1Zi05Y2QzLTNmOGJkZjIzNzQwNSIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.DcyiFlr74BKsdcAz0ZLDCWpy473k1ynNDKsij0mdt6d9sSAcDJJkEWB8V4UsAcfuj4aGofBkyBkQdeORSWlZHq7vPZYPP7RqmVy20axJnVwp0bcwSWE1xANRQO9C-Yt6l_flfan_qDQa5Lul0RqHt-b43u5d7h_nH0z7D6kwP4ce6OBpWCknC8Kify_57oI_hoOqpV5032CnJRrK0vGxRvCtBpQwY3X2YGJbiJ0nU84HOoQO7kRvi2E_PpiTw-jrfaoil9J64YVRuAYtMIJxVsTXZiECfBtym_ZQMaMd0wOHfcECnGM48uLU80CvpmA5dr4dbwF4KurB_jTa4JQ4XQ 
+16:30:05.482 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:Washmetrix/Features/login.feature
+16:30:05.499 [main] DEBUG com.intuit.karate - request:
+1 > POST https://svc-qa.washmetrix.com/sales-and-labor/individual-wash
+1 > Authorization: Bearer eyJraWQiOiIzUHVlWVNpZGx0a1Y5bUd2UER1aXAySlVCU1Q3ek41cVo2dldoMDFYalc4PSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI4OTk4OGJiYi00ODVjLTQ4ODUtOGQ1Ny03NDgxM2VlMDliZTkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV96VjJPd2ZkV0QiLCJjbGllbnRfaWQiOiJ0NG1nMWV1dnF0ajBqa3Fscm1zbmw4MjNuIiwib3JpZ2luX2p0aSI6IjRmMGFlMTc1LWM5OGQtNGMzOS1iM2U5LTA1OGZiY2Q1OWYxZCIsImV2ZW50X2lkIjoiNTU1ODliOWMtNmVlZi00NzkzLWI1MzQtYjNiZGM0NDM1N2I1IiwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiJhd3MuY29nbml0by5zaWduaW4udXNlci5hZG1pbiIsImF1dGhfdGltZSI6MTY4NjQ4MTIwNSwiZXhwIjoxNjg2NTY3NjA1LCJpYXQiOjE2ODY0ODEyMDUsImp0aSI6IjcwOWUxYmRkLTNmNmQtNDY1Zi05Y2QzLTNmOGJkZjIzNzQwNSIsInVzZXJuYW1lIjoidGVzdF9xYV91c2VyIn0.DcyiFlr74BKsdcAz0ZLDCWpy473k1ynNDKsij0mdt6d9sSAcDJJkEWB8V4UsAcfuj4aGofBkyBkQdeORSWlZHq7vPZYPP7RqmVy20axJnVwp0bcwSWE1xANRQO9C-Yt6l_flfan_qDQa5Lul0RqHt-b43u5d7h_nH0z7D6kwP4ce6OBpWCknC8Kify_57oI_hoOqpV5032CnJRrK0vGxRvCtBpQwY3X2YGJbiJ0nU84HOoQO7kRvi2E_PpiTw-jrfaoil9J64YVRuAYtMIJxVsTXZiECfBtym_ZQMaMd0wOHfcECnGM48uLU80CvpmA5dr4dbwF4KurB_jTa4JQ4XQ
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 242
+1 > Host: svc-qa.washmetrix.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"org_id":"7d26c7a5-7dbc-43db-96be-f6f142084614","user_id":"81e2fbfa-33ef-4673-b169-783853da5772","locations":[1,2,3],"time_range":{"start_time":"","end_time":"","anchor_time":""},"frequency":"","detail_data":true,"comparison_mode":"current"}
+
+16:30:07.032 [main] DEBUG com.intuit.karate - response time in milliseconds: 1532
+1 < 401
+1 < Date: Sun, 11 Jun 2023 11:00:06 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 25
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < x-response-time: 0.07165288925170898
+{"error":"Invalid token"}
+
+16:30:07.062 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:13
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 1532, url: https://svc-qa.washmetrix.com/sales-and-labor/individual-wash, response: 
+{"error":"Invalid token"}
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:13
+16:30:07.786 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) Platform/src/test/java/Washmetrix/Features/individualWash.feature
+16:32:48.161 [main] INFO  com.intuit.karate - Karate version: 1.4.0
+16:32:48.597 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:32:48.601 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1686481368598
+16:32:49.736 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:32:49.745 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:Washmetrix/Features/login.feature
+16:32:50.097 [main] DEBUG com.intuit.karate - request:
+1 > POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 69
+1 > Host: fdn-svc-qa.washmetrix.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"username":"balaraju.vemula@zemosolabs.com","password":"3554145R@j"}
+
+16:32:52.281 [main] DEBUG com.intuit.karate - response time in milliseconds: 2174
+1 < 400
+1 < Date: Sun, 11 Jun 2023 11:02:52 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 79
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < x-response-time: 0.24972867965698242
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+
+16:32:52.310 [main] ERROR com.intuit.karate - classpath:Washmetrix/Features/login.feature:12
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+16:32:52.315 [main] WARN  com.intuit.karate - callSingle() will cache an exception
+16:32:52.315 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:Washmetrix/Features/login.feature
+16:32:52.315 [main] WARN  com.intuit.karate - callSingle() cached result is an exception
+16:32:52.329 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+* url 'https://svc-qa.washmetrix.com/'
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+16:32:52.329 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+* def payload = read('classpath:Washmetrix/resourses/individualWash.json')
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+16:32:52.330 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+Given header Authorization = 'Bearer '+ accessToken
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+16:32:52.330 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:10
+Given path 'sales-and-labor/individual-wash'
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:10
+16:32:52.330 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:11
+And request payload
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:10
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:11
+16:32:52.330 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:12
+When method post
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:10
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:11
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:12
+16:32:52.330 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:13
+Then status 200
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 2174, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:10
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:11
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:12
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:13
+16:32:53.072 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) Platform/src/test/java/Washmetrix/Features/individualWash.feature
+16:34:34.875 [main] INFO  com.intuit.karate - Karate version: 1.4.0
+16:34:35.307 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+16:34:35.311 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1686481475307
+16:34:36.520 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:34:36.528 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:Washmetrix/Features/login.feature
+16:34:36.899 [main] DEBUG com.intuit.karate - request:
+1 > POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 47
+1 > Host: fdn-svc-qa.washmetrix.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 > Accept-Encoding: gzip,deflate
+{"username":"balaraju","password":"3554145R@j"}
+
+16:34:40.260 [main] DEBUG com.intuit.karate - response time in milliseconds: 3358
+1 < 400
+1 < Date: Sun, 11 Jun 2023 11:04:39 GMT
+1 < Content-Type: application/json
+1 < Content-Length: 79
+1 < Connection: keep-alive
+1 < Server: nginx
+1 < x-response-time: 0.244293212890625
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+
+16:34:40.275 [main] ERROR com.intuit.karate - classpath:Washmetrix/Features/login.feature:12
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+16:34:40.278 [main] WARN  com.intuit.karate - callSingle() will cache an exception
+16:34:40.279 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:Washmetrix/Features/login.feature
+16:34:40.279 [main] WARN  com.intuit.karate - callSingle() cached result is an exception
+16:34:40.292 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+* url 'https://svc-qa.washmetrix.com/'
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+16:34:40.292 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+* def payload = read('classpath:Washmetrix/resourses/individualWash.json')
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+16:34:40.292 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+Given header Authorization = 'Bearer '+ accessToken
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+16:34:40.292 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:10
+Given path 'sales-and-labor/individual-wash'
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:10
+16:34:40.293 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:11
+And request payload
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:10
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:11
+16:34:40.293 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:12
+When method post
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:10
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:11
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:12
+16:34:40.293 [main] ERROR com.intuit.karate - Platform/src/test/java/Washmetrix/Features/individualWash.feature:13
+Then status 200
+>> Platform/src/test/java/Washmetrix/Features/individualWash.feature:8
+>> karate-config.js failed
+>> status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+js failed:
+>>>>
+01: function fn() {
+02: 
+03:   var env = karate.env; // get system property 'karate.env'
+04:   karate.log('karate.env system property was:', env);
+05:   if (!env) {
+06:     env = 'dev';
+07:   }
+08: 
+09:   var config = {
+10:     username: 'test_qa_user',
+11:     password: 'Qwerty123#',
+12:     accessToken:''
+13:   }
+14: 
+15:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+16:  config.accessToken = result.response.AuthenticationResult.AccessToken;
+17: 
+18:   if (env == 'dev') {
+19:     // customize
+20:     // e.g. config.foo = 'bar';
+21:   } else if (env == 'e2e') {
+22:     // customize
+23:   }
+24:   return config;
+25: }
+<<<<
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3358, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{"__type":"NotAuthorizedException","message":"Incorrect username or password."}
+classpath:Washmetrix/Features/login.feature:12
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- <js>.fn(Unnamed:15)
+
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:4
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:5
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:9
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:10
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:11
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:12
+Platform/src/test/java/Washmetrix/Features/individualWash.feature:13
+16:34:41.058 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) Platform/src/test/java/Washmetrix/Features/individualWash.feature

@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Feature: Washmetrix/Features/individualWash.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Platform</td>
+      <td>11 Jun 2023, 16:08</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">Washmetrix/Features/individualWash.feature</td>
+          <td >0</td>
+          <td      class="failed"    >7</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">7</td>
+
+          <td >0</td>
+          <td  class="failed"    >1</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="0">0.000</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+
+<div class="tags indention">
+</div>
+
+
+<div class="brief failed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">Washmetrix/Features/individualWash.feature</span>
+
+
+</div>
+
+        <div class="description indention">Individual Car wash</div>
+
+        <div class="elements inner-level">
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.000</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+
+<div class="brief failed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-* failed">
+  <span class="keyword indention">*</span>
+  <span class="name">url 'https://svc-qa.washmetrix.com/'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>&gt;&gt;</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>16:08:11.966 classpath:Washmetrix/Features/individualWash.feature:4
+* url 'https://svc-qa.washmetrix.com/'
+&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.000</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Testing api for individual car wash</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-5" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-* failed">
+  <span class="keyword indention">*</span>
+  <span class="name">def payload =</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-7">
+          <a>&gt;&gt;</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details  in ">
+        <pre>&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>{
+    &quot;org_id&quot;: &quot;7d26c7a5-7dbc-43db-96be-f6f142084614&quot;,
+    &quot;user_id&quot;: &quot;81e2fbfa-33ef-4673-b169-783853da5772&quot;,
+    &quot;locations&quot;: [
+  1,
+  2,
+  3
+    ],
+    &quot;time_range&quot;: {
+  &quot;start_time&quot;: &quot;&quot;,
+  &quot;end_time&quot;: &quot;&quot;,
+  &quot;anchor_time&quot;: &quot;&quot;
+    },
+    &quot;frequency&quot;: &quot;&quot;,
+    &quot;detail_data&quot;: true,
+    &quot;comparison_mode&quot;: &quot;current&quot;
+    }16:08:11.967 classpath:Washmetrix/Features/individualWash.feature:7
+* def payload =
+&quot;&quot;&quot;
+{
+    &quot;org_id&quot;: &quot;7d26c7a5-7dbc-43db-96be-f6f142084614&quot;,
+    &quot;user_id&quot;: &quot;81e2fbfa-33ef-4673-b169-783853da5772&quot;,
+    &quot;locations&quot;: [
+  1,
+  2,
+  3
+    ],
+    &quot;time_range&quot;: {
+  &quot;start_time&quot;: &quot;&quot;,
+  &quot;end_time&quot;: &quot;&quot;,
+  &quot;anchor_time&quot;: &quot;&quot;
+    },
+    &quot;frequency&quot;: &quot;&quot;,
+    &quot;detail_data&quot;: true,
+    &quot;comparison_mode&quot;: &quot;current&quot;
+    }
+&quot;&quot;&quot;
+&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">header Authorization = 'Bearer ' + accessToken</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+          <a>&gt;&gt;</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details  in ">
+        <pre>&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+classpath:Washmetrix/Features/individualWash.feature:27</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>16:08:11.967 classpath:Washmetrix/Features/individualWash.feature:27
+Given header Authorization = 'Bearer ' + accessToken
+&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+classpath:Washmetrix/Features/individualWash.feature:27
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given failed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'sales-and-labor/individual-wash'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
+          <a>&gt;&gt;</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details  in ">
+        <pre>&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+classpath:Washmetrix/Features/individualWash.feature:27
+classpath:Washmetrix/Features/individualWash.feature:28</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>16:08:11.967 classpath:Washmetrix/Features/individualWash.feature:28
+Given path 'sales-and-labor/individual-wash'
+&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+classpath:Washmetrix/Features/individualWash.feature:27
+classpath:Washmetrix/Features/individualWash.feature:28
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And failed">
+  <span class="keyword indention">And</span>
+  <span class="name">request payload</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-13">
+          <a>&gt;&gt;</a>
+      </div>
+      <div id="msg-13" class="collapse collapsable-details  in ">
+        <pre>&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+classpath:Washmetrix/Features/individualWash.feature:27
+classpath:Washmetrix/Features/individualWash.feature:28
+classpath:Washmetrix/Features/individualWash.feature:29</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-14">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-14" class="collapse collapsable-details">
+        <pre>16:08:11.967 classpath:Washmetrix/Features/individualWash.feature:29
+And request payload
+&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+classpath:Washmetrix/Features/individualWash.feature:27
+classpath:Washmetrix/Features/individualWash.feature:28
+classpath:Washmetrix/Features/individualWash.feature:29
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-15">
+          <a>&gt;&gt;</a>
+      </div>
+      <div id="msg-15" class="collapse collapsable-details  in ">
+        <pre>&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+classpath:Washmetrix/Features/individualWash.feature:27
+classpath:Washmetrix/Features/individualWash.feature:28
+classpath:Washmetrix/Features/individualWash.feature:29
+classpath:Washmetrix/Features/individualWash.feature:30</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-16" class="collapse collapsable-details">
+        <pre>16:08:11.968 classpath:Washmetrix/Features/individualWash.feature:30
+When method post
+&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+classpath:Washmetrix/Features/individualWash.feature:27
+classpath:Washmetrix/Features/individualWash.feature:28
+classpath:Washmetrix/Features/individualWash.feature:29
+classpath:Washmetrix/Features/individualWash.feature:30
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-17">
+          <a>&gt;&gt;</a>
+      </div>
+      <div id="msg-17" class="collapse collapsable-details  in ">
+        <pre>&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+classpath:Washmetrix/Features/individualWash.feature:27
+classpath:Washmetrix/Features/individualWash.feature:28
+classpath:Washmetrix/Features/individualWash.feature:29
+classpath:Washmetrix/Features/individualWash.feature:30
+classpath:Washmetrix/Features/individualWash.feature:31</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-18">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details">
+        <pre>16:08:11.968 classpath:Washmetrix/Features/individualWash.feature:31
+Then status 200
+&gt;&gt; classpath:Washmetrix/Features/individualWash.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle('classpath:Washmetrix/Features/login.feature', config);
+04:  config.accessToken = result.AuthenticationResult.AccessToken;
+05: 
+06:   var env = karate.env; // get system property 'karate.env'
+07:   karate.log('karate.env system property was:', env);
+08:   if (!env) {
+09:     env = 'dev';
+10:   }
+11:   var config = {
+12:     username: 'test_qa_user',
+13:     password: 'Qwerty123#',
+14:     accessToken:''
+15:   }
+16:   if (env == 'dev') {
+17:     // customize
+18:     // e.g. config.foo = 'bar';
+19:   } else if (env == 'e2e') {
+20:     // customize
+21:   }
+22:   return config;
+23: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: TypeError: Cannot read property &quot;AccessToken&quot; from undefined
+- &lt;js&gt;.fn(Unnamed:4)
+
+classpath:Washmetrix/Features/individualWash.feature:4
+classpath:Washmetrix/Features/individualWash.feature:7
+classpath:Washmetrix/Features/individualWash.feature:27
+classpath:Washmetrix/Features/individualWash.feature:28
+classpath:Washmetrix/Features/individualWash.feature:29
+classpath:Washmetrix/Features/individualWash.feature:30
+classpath:Washmetrix/Features/individualWash.feature:31
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

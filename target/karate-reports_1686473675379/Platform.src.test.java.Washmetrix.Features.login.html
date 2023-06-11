@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"96980dbd-9087-4c58-ba01-43385360c360",karate_version:"1.4.0",karate_meta:"intellij:1.7.4.325"});
+  }
+});
+</script>
+
+    <title>Platform.src.test.java.Washmetrix.Features.login</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2023-06-11 01:35:12 pm</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:6]"><span>[1:6]</span> <span>Loggin in to Washmetrix</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">Platform/src/test/java/Washmetrix/Features/login.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Login to WM</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:6]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:6]</span>
+                <span class="scenario-name">Loggin in to Washmetrix</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:6]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:6]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>url &#39;https://fdn-svc-qa.washmetrix.com/v1/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">13:35:12.759 callSingle() will cache an exception
+13:35:12.759 &lt;&lt; lock released, cached callSingle: classpath:Washmetrix/Features/login.feature
+13:35:12.759 callSingle() cached result is an exception
+13:35:12.774 Platform/src/test/java/Washmetrix/Features/login.feature:4
+* url &#39;https://fdn-svc-qa.washmetrix.com/v1/&#39;
+&gt;&gt; Platform/src/test/java/Washmetrix/Features/login.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- &lt;js&gt;.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+</div>   
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.4.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">Washmetrix.Features.login</div>
+      </div>
+      <div class="time-cell passed">3468</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.4">
+      <div class="step-ref bg-step">4</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;https://fdn-svc-qa.washmetrix.com/v1/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.4">13:35:09.264 &gt;&gt; lock acquired, begin callSingle: classpath:Washmetrix/Features/login.feature
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.7">
+      <div class="step-ref bg-step">7</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def user =</span>
+      </div>
+    </div>
+    <div class="time-cell passed">41</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.4.0.call.0.7">{
+&quot;username&quot;:&quot;{username}&quot;,
+&quot;password&quot;:&quot;{password}&quot;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.14">
+      <div class="step-ref bg-step">14</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.15">
+      <div class="step-ref bg-step">15</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request user</span>
+      </div>
+    </div>
+    <div class="time-cell passed">17</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.16">
+      <div class="step-ref bg-step">16</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3395</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.16">13:35:09.643 request:
+1 &gt; POST https://fdn-svc-qa.washmetrix.com/v1/login
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 49
+1 &gt; Host: fdn-svc-qa.washmetrix.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;username&quot;:&quot;{username}&quot;,&quot;password&quot;:&quot;{password}&quot;}
+
+13:35:12.736 response time in milliseconds: 3085
+1 &lt; 400
+1 &lt; Date: Sun, 11 Jun 2023 08:05:12 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 79
+1 &lt; Connection: keep-alive
+1 &lt; Server: nginx
+1 &lt; x-response-time: 0.2840440273284912
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.17">
+      <div class="step-ref bg-step">17</div>
+      <div class="step-indent"></div>
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">13</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4.0.call.0.17">13:35:12.753 classpath:Washmetrix/Features/login.feature:17
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="0.4.0.call">
+    <div class="step-container" id="0.4.0.call.0.18">
+      <div class="step-ref bg-step">18</div>
+      <div class="step-indent"></div>
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref failed">7</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>def user =</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.7">{
+&quot;username&quot;:&quot;{username}&quot;,
+&quot;password&quot;:&quot;{password}&quot;
+}</div>
+
+  
+
+  <div class="preformatted" data-parent="0.7">13:35:12.775 Platform/src/test/java/Washmetrix/Features/login.feature:7
+* def user =
+&quot;&quot;&quot;
+{
+&quot;username&quot;:&quot;{username}&quot;,
+&quot;password&quot;:&quot;{password}&quot;
+}
+&quot;&quot;&quot;
+&gt;&gt; Platform/src/test/java/Washmetrix/Features/login.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- &lt;js&gt;.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref failed">14</div>
+      
+      <div class="step-cell failed">
+        <span>Given</span>&nbsp;<span>path &#39;login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">13:35:12.775 Platform/src/test/java/Washmetrix/Features/login.feature:14
+Given path &#39;login&#39;
+&gt;&gt; Platform/src/test/java/Washmetrix/Features/login.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- &lt;js&gt;.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+Platform/src/test/java/Washmetrix/Features/login.feature:14
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref failed">15</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>request user</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">13:35:12.775 Platform/src/test/java/Washmetrix/Features/login.feature:15
+And request user
+&gt;&gt; Platform/src/test/java/Washmetrix/Features/login.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- &lt;js&gt;.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+Platform/src/test/java/Washmetrix/Features/login.feature:14
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref failed">16</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.16">13:35:12.775 Platform/src/test/java/Washmetrix/Features/login.feature:16
+When method post
+&gt;&gt; Platform/src/test/java/Washmetrix/Features/login.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- &lt;js&gt;.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+Platform/src/test/java/Washmetrix/Features/login.feature:14
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref failed">17</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.17">13:35:12.775 Platform/src/test/java/Washmetrix/Features/login.feature:17
+Then status 200
+&gt;&gt; Platform/src/test/java/Washmetrix/Features/login.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- &lt;js&gt;.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+Platform/src/test/java/Washmetrix/Features/login.feature:14
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref failed">18</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.18">13:35:12.775 Platform/src/test/java/Washmetrix/Features/login.feature:18
+Then print response
+&gt;&gt; Platform/src/test/java/Washmetrix/Features/login.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02: 
+03:  var result = karate.callSingle(&#39;classpath:Washmetrix/Features/login.feature&#39;, config);
+04:  config.accessToken = result.token;
+05: 
+06:   var env = karate.env; // get system property &#39;karate.env&#39;
+07:   karate.log(&#39;karate.env system property was:&#39;, env);
+08:   if (!env) {
+09:     env = &#39;dev&#39;;
+10:   }
+11:   var config = {
+12:     username: &#39;test_qa_user&#39;,
+13:     password: &#39;Qwerty123#&#39;
+14:   }
+15:   if (env == &#39;dev&#39;) {
+16:     // customize
+17:     // e.g. config.foo = &#39;bar&#39;;
+18:   } else if (env == &#39;e2e&#39;) {
+19:     // customize
+20:   }
+21:   return config;
+22: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: status code was: 400, expected: 200, response time in milliseconds: 3085, url: https://fdn-svc-qa.washmetrix.com/v1/login, response: 
+{&quot;__type&quot;:&quot;NotAuthorizedException&quot;,&quot;message&quot;:&quot;Incorrect username or password.&quot;}
+classpath:Washmetrix/Features/login.feature:17
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:240)
+- &lt;js&gt;.fn(Unnamed:3)
+
+Platform/src/test/java/Washmetrix/Features/login.feature:4
+Platform/src/test/java/Washmetrix/Features/login.feature:7
+Platform/src/test/java/Washmetrix/Features/login.feature:14
+Platform/src/test/java/Washmetrix/Features/login.feature:15
+Platform/src/test/java/Washmetrix/Features/login.feature:16
+Platform/src/test/java/Washmetrix/Features/login.feature:17
+Platform/src/test/java/Washmetrix/Features/login.feature:18
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

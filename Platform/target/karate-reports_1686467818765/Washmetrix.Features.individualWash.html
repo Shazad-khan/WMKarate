@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"96980dbd-9087-4c58-ba01-43385360c360",karate_version:"1.4.0",karate_meta:null});
+  }
+});
+</script>
+
+    <title>Washmetrix.Features.individualWash</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2023-06-08 02:47:01 pm</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:7]"><span>[1:7]</span> <span>Testing api for individual car wash</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">Washmetrix/Features/individualWash.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Individual Car wash</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:7]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:7]</span>
+                <span class="scenario-name">Testing api for individual car wash</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>6843</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:7]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:7]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;https://svc-qa.washmetrix.com/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5">14:46:55.087 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref passed">8</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + &#39;eyJraWQiOiJQenJ6UFwvV29yWGk2d0VHTDN5cGtZbVNEU09QY0tFVDdhUTZOeFNIbU5qOD0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4ZWM5ZTQ2MS05NTYyLTRhOWQtOWIzYi01OWEwODFhN2FiODEiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9LcXdYdEl6bHIiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI3OTV0ZmswbGZqbGhxMDJ0NDAydTZqMGtuMSIsIm9yaWdpbl9qdGkiOiJhYWEwN2ZmYi00NmMzLTRmNDQtOWMyYi02YjYxY2FkOTkwZGEiLCJldmVudF9pZCI6IjZiZDJiNWZhLTg3ODMtNDllNy1hYTJlLTA2NDFiMzRlYTY5NyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoicGhvbmUgb3BlbmlkIGVtYWlsIiwiYXV0aF90aW1lIjoxNjg2MjA0MDk0LCJleHAiOjE2ODYyOTA0OTQsImlhdCI6MTY4NjIwNDA5NCwianRpIjoiNDNjYmJiOWMtODBlZi00MjYwLWEwZDktODM0ZjNhY2JlOGQxIiwidXNlcm5hbWUiOiJiYWxhcmFqdS52ZW11bGEifQ.G3sUjfyW9eswxwi8hk_HFFQ_lGZyjsbqoSVSY5TPnumdWB8eDEokN8X-fNAtMf59TbVKn_buhPQ3DTa3hY_Bxo2w_IlLUyOl0aGhTC17SE6CiqD9HzbTlRYqa8Y5QojQjvbkv9mE9clwEORdY5Pm1k1UgTyeenZZSs_5dmjScFA_WFsM25oyXdkfpxGEdQwgPY13CwXwQfGCMMh1hyBtlX8CNk_BNOVcZcg-s26Cq3Tne_otFkASS4SFn4_qebJKuHdPbwiKZzXOjZdhsEsXPffMwQ6wG8NtpuZec0ldqLAWb-00KDqkZaj-bVC9_VIA_kD0ql4-H8lAhXzM6_J8KA&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;sales-and-labor/individual-wash&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {&quot;org_id&quot;: &quot;7d26c7a5-7dbc-43db-96be-f6f142084614&quot;,&quot;user_id&quot;: &quot;81e2fbfa-33ef-4673-b169-783853da5772&quot;,&quot;locations&quot;: [1, 2,3],&quot;time_range&quot;: {&quot;start_time&quot;: &quot;&quot;, &quot;end_time&quot;: &quot;&quot;, &quot;anchor_time&quot;: &quot;&quot;},&quot;frequency&quot;: &quot;&quot;,&quot;detail_data&quot;: true,&quot;comparison_mode&quot;: &quot;current&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">54</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6779</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">14:46:55.393 request:
+1 &gt; POST https://svc-qa.washmetrix.com/sales-and-labor/individual-wash
+1 &gt; Authorization: Bearer eyJraWQiOiJQenJ6UFwvV29yWGk2d0VHTDN5cGtZbVNEU09QY0tFVDdhUTZOeFNIbU5qOD0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI4ZWM5ZTQ2MS05NTYyLTRhOWQtOWIzYi01OWEwODFhN2FiODEiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9LcXdYdEl6bHIiLCJ2ZXJzaW9uIjoyLCJjbGllbnRfaWQiOiI3OTV0ZmswbGZqbGhxMDJ0NDAydTZqMGtuMSIsIm9yaWdpbl9qdGkiOiJhYWEwN2ZmYi00NmMzLTRmNDQtOWMyYi02YjYxY2FkOTkwZGEiLCJldmVudF9pZCI6IjZiZDJiNWZhLTg3ODMtNDllNy1hYTJlLTA2NDFiMzRlYTY5NyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoicGhvbmUgb3BlbmlkIGVtYWlsIiwiYXV0aF90aW1lIjoxNjg2MjA0MDk0LCJleHAiOjE2ODYyOTA0OTQsImlhdCI6MTY4NjIwNDA5NCwianRpIjoiNDNjYmJiOWMtODBlZi00MjYwLWEwZDktODM0ZjNhY2JlOGQxIiwidXNlcm5hbWUiOiJiYWxhcmFqdS52ZW11bGEifQ.G3sUjfyW9eswxwi8hk_HFFQ_lGZyjsbqoSVSY5TPnumdWB8eDEokN8X-fNAtMf59TbVKn_buhPQ3DTa3hY_Bxo2w_IlLUyOl0aGhTC17SE6CiqD9HzbTlRYqa8Y5QojQjvbkv9mE9clwEORdY5Pm1k1UgTyeenZZSs_5dmjScFA_WFsM25oyXdkfpxGEdQwgPY13CwXwQfGCMMh1hyBtlX8CNk_BNOVcZcg-s26Cq3Tne_otFkASS4SFn4_qebJKuHdPbwiKZzXOjZdhsEsXPffMwQ6wG8NtpuZec0ldqLAWb-00KDqkZaj-bVC9_VIA_kD0ql4-H8lAhXzM6_J8KA
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 242
+1 &gt; Host: svc-qa.washmetrix.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/20.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;org_id&quot;:&quot;7d26c7a5-7dbc-43db-96be-f6f142084614&quot;,&quot;user_id&quot;:&quot;81e2fbfa-33ef-4673-b169-783853da5772&quot;,&quot;locations&quot;:[1,2,3],&quot;time_range&quot;:{&quot;start_time&quot;:&quot;&quot;,&quot;end_time&quot;:&quot;&quot;,&quot;anchor_time&quot;:&quot;&quot;},&quot;frequency&quot;:&quot;&quot;,&quot;detail_data&quot;:true,&quot;comparison_mode&quot;:&quot;current&quot;}
+
+14:47:01.935 response time in milliseconds: 6540
+1 &lt; 200
+1 &lt; Date: Thu, 08 Jun 2023 09:17:01 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 1242
+1 &lt; Connection: keep-alive
+1 &lt; Server: nginx
+1 &lt; x-response-time: 0.3529856204986572
+{&quot;info&quot;:{&quot;identifier&quot;:&quot;INDIVIDUAL_WASHES&quot;,&quot;default_frequency&quot;:&quot;monthly&quot;,&quot;available_frequencies&quot;:[&quot;monthly&quot;,&quot;quarterly&quot;,&quot;yearly&quot;],&quot;callouts&quot;:{&quot;primary_callouts&quot;:{&quot;total_wash_count&quot;:&quot;&quot;},&quot;secondary_callouts&quot;:{&quot;highest_selling_package&quot;:&quot;&quot;,&quot;highest_selling_package_total&quot;:&quot;&quot;,&quot;highest_selling_package_percentage&quot;:&quot;&quot;}},&quot;supporting_text&quot;:&quot;Highest selling package&quot;,&quot;kpi_uri&quot;:&quot;/sales-and-labor/individual-wash&quot;},&quot;data&quot;:{&quot;callouts&quot;:{&quot;primary_callouts&quot;:{&quot;total_wash_count&quot;:1370},&quot;secondary_callouts&quot;:{&quot;highest_selling_package&quot;:&quot;Alpine Express&quot;,&quot;highest_selling_package_total&quot;:548,&quot;highest_selling_package_percentage&quot;:40.0}},&quot;supporting_text&quot;:&quot;Highest selling package&quot;,&quot;prev_comparison&quot;:-76.80717792449636,&quot;prev_comparison_context&quot;:&quot;from prev_month&quot;,&quot;detail_data&quot;:[{&quot;values&quot;:[{&quot;data_frequency&quot;:&quot;monthly&quot;,&quot;data_breakdown&quot;:{&quot;wash&quot;:1370,&quot;revenue&quot;:18527.0,&quot;grouped_data&quot;:[{&quot;Jun-23&quot;:{&quot;total_wash&quot;:1370,&quot;total_revenue&quot;:18527,&quot;package_breakdown&quot;:[{&quot;package_type&quot;:&quot;Alpine Everest&quot;,&quot;washes&quot;:157,&quot;revenue&quot;:3421},{&quot;package_type&quot;:&quot;Alpine Summit&quot;,&quot;washes&quot;:158,&quot;revenue&quot;:2854},{&quot;package_type&quot;:&quot;Alpine Peak&quot;,&quot;washes&quot;:150,&quot;revenue&quot;:2413},{&quot;package_type&quot;:&quot;Alpine Deluxe&quot;,&quot;washes&quot;:357,&quot;revenue&quot;:4314},{&quot;package_type&quot;:&quot;Alpine Express&quot;,&quot;washes&quot;:548,&quot;revenue&quot;:5525}]}}]}}]}]}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
